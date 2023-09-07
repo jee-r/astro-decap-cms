@@ -1,4 +1,4 @@
-import type { CmsConfig } from 'netlify-cms-core';
+import type { CmsConfig } from 'decap-cms-core';
 import type { Plugin } from 'vite';
 import type { PreviewStyle } from './types';
 
@@ -30,7 +30,7 @@ function generateVirtualConfigModule({
   });
 
   return `${imports.join('\n')}
-import * as NCMS from 'netlify-cms-app';
+import * as NCMS from 'decap-cms-app';
 ${identityWidget}
 export default {
   cms: NCMS,

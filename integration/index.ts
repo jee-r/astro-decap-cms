@@ -1,5 +1,5 @@
 import type { AstroIntegration, AstroUserConfig } from 'astro';
-import type { CmsConfig } from 'netlify-cms-core';
+import type { CmsConfig } from 'decap-cms-core';
 import { spawn } from 'node:child_process';
 import type { PreviewStyle } from './types.js';
 import AdminDashboard from './vite-plugin-admin-dashboard.js';
@@ -76,7 +76,7 @@ export default function NetlifyCMS({
       },
 
       'astro:server:start': () => {
-        proxy = spawn('netlify-cms-proxy-server', {
+        proxy = spawn('decap-server', {
           stdio: 'inherit',
           // Run in shell on Windows to make sure the npm package can be found.
           shell: process.platform === 'win32',
