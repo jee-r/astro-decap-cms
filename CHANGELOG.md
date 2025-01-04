@@ -1,5 +1,11 @@
 # @miseya/astro-decap-cms
 
+## 0.4.1
+
+### Patch Changes
+
+- [`5c102b2`](https://github.com/miseya/astro-decap-cms/commit/5c102b2fdce4047c123e066120a158970359db46) Thanks [@sglkc](https://github.com/sglkc)! - use `tsup` for bundle, include `decap-cms-core` type definitions for config
+
 ## 0.4.0
 
 ### Minor Changes
