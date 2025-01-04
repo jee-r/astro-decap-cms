@@ -1,6 +1,6 @@
 {
   "name": "@miseya/astro-decap-cms",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Add Decap CMS's admin dashboard to your Astro project, with faster build time using CDN",
   "repository": "miseya/astro-decap-cms",
   "homepage": "https://github.com/miseya/astro-decap-cms",
