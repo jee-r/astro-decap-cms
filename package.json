@@ -14,13 +14,13 @@
   "exports": {
     ".": "./dist/index.js",
     "./identity-widget": "./dist/identity-widget.js",
-    "./vite-plugin-admin-dashboard": "./dist/vite/plugin.js",
+    "./vite-plugin-admin-dashboard": "./dist/vite-plugin.js",
     "./admin-dashboard.astro": "./admin-dashboard.astro"
   },
   "types": "./dist/index.d.ts",
   "scripts": {
-    "prepack": "tsc",
-    "test:smoke": "tsc && cd demo && pnpm i && pnpm build",
+    "prepack": "tsup",
+    "test:smoke": "pnpm prepack && cd demo && pnpm i && pnpm build",
     "test": "pnpm run test:smoke"
   },
   "keywords": [
@@ -42,6 +42,7 @@
     "@changesets/cli": "^2.27.1",
     "astro": "^4.5.18",
     "decap-cms-core": "^3.5.0",
+    "tsup": "^8.3.5",
     "typescript": "^5.4.5"
   }
 }
