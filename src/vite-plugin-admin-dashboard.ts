@@ -30,10 +30,10 @@ function generateVirtualConfigModule({
   });
 
   return `${imports.join('\n')}
-import * as NCMS from 'decap-cms-app';
+import CMS from 'decap-cms-app';
 ${identityWidget}
 export default {
-  cms: NCMS,
+  cms: CMS,
   config: JSON.parse('${JSON.stringify(config)}'),
   previewStyles: [${styles.join(',')}],
 };
