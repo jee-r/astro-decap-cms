@@ -17,6 +17,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "dev:demo": "pnpm run build && cd demo && pnpm install && pnpm run dev",
     "prepack": "pnpm run build",
     "test:smoke": "pnpm run build && cd demo && pnpm install --frozen-lockfile && pnpm run build",
     "test": "pnpm run test:smoke",
@@ -50,6 +51,9 @@
     "conventional-changelog-cli": "^5.0.0",
     "conventional-changelog-conventionalcommits": "^9.1.0",
     "typescript": "^5.7.2",
-    "vite": "6.4.1"
+    "vite": "^6.4.1"
+  },
+	"pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp"]
   }
 }
