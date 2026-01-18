@@ -1,3 +1,49 @@
+## [1.0.0](https://github.com/jee-r/astro-decap-cms/compare/v0.6.1...v1.0.0) (2026-01-18)
+
+### Features
+
+* add editorconfig and VSCode settings ([b72176f](https://github.com/jee-r/astro-decap-cms/commit/b72176f925aa7df5091ac735079e59e8dfa74d14))
+* add noindex robots metatag ([529d600](https://github.com/jee-r/astro-decap-cms/commit/529d600f4e52e4b0c4693ab37494d9f20cfc321c))
+* add Renovate configuration for automated dependency updates ([e176295](https://github.com/jee-r/astro-decap-cms/commit/e17629539e190e61c0c785c1340e5acca5cbb8ec))
+
+### Bug Fixes
+
+* resolve TypeScript compilation errors for Astro 5 ([43c6724](https://github.com/jee-r/astro-decap-cms/commit/43c6724e85d8a8bd7b615214c964ed0ea3e5636c))
+* **vite-plugin:** update import for decap-cms-app 3.10.0 ([e2e3663](https://github.com/jee-r/astro-decap-cms/commit/e2e36636cb95328a6eca67d51d19866ee822f36f))
+
+### Documentation
+
+* add credits section to README ([e4d577b](https://github.com/jee-r/astro-decap-cms/commit/e4d577b5615f897b7b33813d7e7b7eead7b811a2))
+* add development section with build and testing instructions ([8c9f278](https://github.com/jee-r/astro-decap-cms/commit/8c9f2787e555b5f84038c4e7684454632e8fc834))
+* add MIT license file ([c7295ca](https://github.com/jee-r/astro-decap-cms/commit/c7295ca7beca2ad30b14ffdb2dce6148c0c6d93c))
+* **demo:** clean up documentation and references ([f002b8c](https://github.com/jee-r/astro-decap-cms/commit/f002b8c6e62f738521eafbd895206ea405443595))
+* fix package name and broken links in README ([0035caa](https://github.com/jee-r/astro-decap-cms/commit/0035caa6a5357fd03b83d09410155439e2f30880))
+* update examples to use DecapCMS ([e944508](https://github.com/jee-r/astro-decap-cms/commit/e944508e8b807cb5f9a34358bc95b1258c1a8509))
+
+### Chores
+
+* add changelog configuration for all commit types ([73e5a29](https://github.com/jee-r/astro-decap-cms/commit/73e5a290facf092f0b7885fdf2b56b8357b0b2f8))
+* add demo lockfile and update gitignore ([32da775](https://github.com/jee-r/astro-decap-cms/commit/32da775b7e098d79e58cd4cad6ce55e5a5517f6b))
+* **build:** add dedicated build script and migrate to pnpm ([b129f62](https://github.com/jee-r/astro-decap-cms/commit/b129f62a6dad8e5e411667b1939908219a8be820))
+* **ci:** update GitHub Actions workflows ([c7baf37](https://github.com/jee-r/astro-decap-cms/commit/c7baf37bab095ce8c9732400fe50ecebfffa0fe6))
+* **ci:** update release workflow for tag-based releases ([2509bef](https://github.com/jee-r/astro-decap-cms/commit/2509befdba562b8a95d976b68bf7d592e8e0cc59))
+* **demo:** add decap-server dependency ([cb3fbb9](https://github.com/jee-r/astro-decap-cms/commit/cb3fbb9d9008b41c362bfbacd8d2938a6145adf4))
+* **demo:** migrate start script to pnpm ([b23f9e1](https://github.com/jee-r/astro-decap-cms/commit/b23f9e1e8e393cbc3ba5eec91c47fe497044972f))
+* **demo:** update to Astro 5 ([7dc2bc8](https://github.com/jee-r/astro-decap-cms/commit/7dc2bc8cb80854ef1470706f89f1d06384803f5f))
+* **deps:** configure pnpm build scripts allowlist ([be5e9f5](https://github.com/jee-r/astro-decap-cms/commit/be5e9f555c5fb7a7ff4ba06466f12e7233d3094f))
+* **deps:** update dependencies to latest versions ([a7277c9](https://github.com/jee-r/astro-decap-cms/commit/a7277c97a827ad807b2ac16120aa592dba9a257d))
+* **deps:** upgrade to React 19 and latest Decap CMS ([0877dae](https://github.com/jee-r/astro-decap-cms/commit/0877dae83d63e006298336f8e7ed44ac0074e01a))
+* fix Changesets configuration ([4d4dd77](https://github.com/jee-r/astro-decap-cms/commit/4d4dd772212b8e2d31195b8d97bb0fb021aa6379))
+* ignore demo build artifacts and lockfiles ([cea2987](https://github.com/jee-r/astro-decap-cms/commit/cea298748a3aabfa6b13edaa92ac98251a87e2b7))
+* improve package.json keywords ([981390a](https://github.com/jee-r/astro-decap-cms/commit/981390a3bbc32e5f39c0f9ef54d7a7e6f5e393a8))
+* migrate from Changesets to conventional-changelog ([bcdb89d](https://github.com/jee-r/astro-decap-cms/commit/bcdb89deb12bd2dde9293f675343a126d44a6d24))
+
+### Code Refactoring
+
+* **core:** rename NetlifyCMS to DecapCMS ([ba3997d](https://github.com/jee-r/astro-decap-cms/commit/ba3997deccdb5d55ade848d928a0944faea795e7))
+* **demo:** update to use DecapCMS and main branch ([427ad9f](https://github.com/jee-r/astro-decap-cms/commit/427ad9fb41db7ff9012fe48ef8fcb97df7f849a1))
+* improve code quality in src/index.ts ([172f0dd](https://github.com/jee-r/astro-decap-cms/commit/172f0ddcba8da4966330db1ee329f0681980b086))
+* move integration folder to src ([31e73ab](https://github.com/jee-r/astro-decap-cms/commit/31e73ab7c42ff5a4c88b22c84a8b564f1f3fd00c))
 # astro-netlify-cms
 
 ## 0.6.0
