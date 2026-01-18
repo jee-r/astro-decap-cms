@@ -8,13 +8,13 @@ to any <a href="https://astro.build/">Astro</a> project
 ## Installation
 
 ```bash
-npm i astro-decap-cms
+npm i @jee-r/astro-decap-cms
 ```
 
 ## What is this?
 
 This is an integration for the [Astro](https://astro.build/) site builder,
-which adds support for [Decap CMS](https:///), an
+which adds support for [Decap CMS](https://decapcms.org/), an
 open-source, Git-based content management system.
 
 Adding the integration will:
@@ -25,7 +25,7 @@ Adding the integration will:
 
 Usually each of these requires individual set up and configuration. Using this integration, you configure your CMS once in `astro.config.mjs`, sit back, and enjoy!
 
-> Looking for a quick way to get started? [Try out the Blog Starter with Decap CMS →](https://github.com/delucis/astro-netlify-cms-starter)
+> Looking for a quick way to get started? Check out the [demo](./demo) included in this repository.
 
 ## Usage
 
@@ -131,7 +131,7 @@ previewStyles: [
 **Type:** `boolean`  
 **Default:** `false`
 
-By default, `astro-decap-cms` injects Netlify’s [Identity Widget](https://github.com/netlify/netlify-identity-widget) across your site to enable authentication. If you only want to inject the widget on the admin route, you can set `disableIdentityWidgetInjection: true`.
+By default, `@jee-r/astro-decap-cms` injects Netlify's [Identity Widget](https://github.com/netlify/netlify-identity-widget) across your site to enable authentication. If you only want to inject the widget on the admin route, you can set `disableIdentityWidgetInjection: true`.
 
 ## Credits
 
