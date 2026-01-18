@@ -19,5 +19,4 @@ yarn-error.log*
 # demo artifacts
 demo/.astro/
 demo/package-lock.json
-demo/pnpm-lock.yaml
 demo/pnpm-workspace.yaml
