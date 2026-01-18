@@ -38,11 +38,11 @@ Astro config file, adding it to the `integrations` array.
 // astro.config.mjs
 
 import { defineConfig } from 'astro/config';
-import NetlifyCMS from 'astro-decap-cms';
+import DecapCMS from '@jee-r/astro-decap-cms';
 
 export default defineConfig({
   integrations: [
-    NetlifyCMS({
+    DecapCMS({
       config: {
         backend: {
           name: 'git-gateway',
