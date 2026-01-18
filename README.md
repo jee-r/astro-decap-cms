@@ -1,9 +1,10 @@
-![Astro + Decap CMS](header.png)
-
-<p align="center">
-Add <a href="https://decapcms.org/">Decap CMS</a>’s admin dashboard
-to any <a href="https://astro.build/">Astro</a> project
-</p>
+<div align="center">
+    <img src="./DecAp.svg" alt="DecAP" height="120" />
+  <p>
+    Add <a href="https://decapcms.org/">Decap CMS</a>'s admin dashboard
+    to any <a href="https://astro.build/">Astro</a> project
+  </p>
+</div>
 
 ## Installation
 
@@ -63,7 +64,7 @@ You can pass an options object to the integration to configure how it behaves.
 
 #### `adminPath`
 
-**Type:** `string`  
+**Type:** `string`
 **Default:** `'/admin'`
 
 Determines the route where the Decap CMS admin dashboard will be available on your site.
@@ -128,7 +129,7 @@ previewStyles: [
 
 #### `disableIdentityWidgetInjection`
 
-**Type:** `boolean`  
+**Type:** `boolean`
 **Default:** `false`
 
 By default, `@jee-r/astro-decap-cms` injects Netlify's [Identity Widget](https://github.com/netlify/netlify-identity-widget) across your site to enable authentication. If you only want to inject the widget on the admin route, you can set `disableIdentityWidgetInjection: true`.
