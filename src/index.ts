@@ -6,9 +6,9 @@ import AdminDashboard from './vite-plugin-admin-dashboard.js';
 
 const widgetPath = '@jee-r/astro-decap-cms/identity-widget';
 
-interface NetlifyCMSOptions {
+interface DecapCMSOptions {
   /**
-   * Path at which the Netlify CMS admin dashboard should be served.
+   * Path at which the Decap CMS admin dashboard should be served.
    * @default '/admin'
    */
   adminPath?: string;
@@ -23,12 +23,12 @@ interface NetlifyCMSOptions {
  * @param options - Configuration options for the Decap CMS integration
  * @returns An Astro integration that adds Decap CMS to your project
  */
-export default function NetlifyCMS({
+export default function DecapCMS({
   disableIdentityWidgetInjection = false,
   adminPath = '/admin',
   config: cmsConfig,
   previewStyles = [],
-}: NetlifyCMSOptions) {
+}: DecapCMSOptions) {
   if (!adminPath.startsWith('/')) {
     throw new Error(
       `'adminPath' option must be a root-relative pathname, starting with "/", got "${adminPath}"`
@@ -40,7 +40,7 @@ export default function NetlifyCMS({
 
   let proxy: ReturnType<typeof spawn>;
 
-  const NetlifyCMSIntegration: AstroIntegration = {
+  const DecapCMSIntegration: AstroIntegration = {
     name: 'decap-cms',
     hooks: {
       'astro:config:setup': ({
@@ -91,5 +91,5 @@ export default function NetlifyCMS({
       },
     },
   };
-  return NetlifyCMSIntegration;
+  return DecapCMSIntegration;
 }
