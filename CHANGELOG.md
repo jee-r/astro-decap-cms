@@ -1,5 +1,14 @@
 ## [1.0.0](https://github.com/jee-r/astro-decap-cms/compare/v0.6.1...v1.0.0) (2026-01-18)
 
+### ⚠ BREAKING CHANGES
+
+* **core:** The main export has been renamed from `NetlifyCMS` to `DecapCMS` to reflect the project's migration from Netlify CMS to Decap CMS. Users must update their imports:
+  ```diff
+  - import NetlifyCMS from '@jee-r/astro-decap-cms';
+  + import DecapCMS from '@jee-r/astro-decap-cms';
+  ```
+  The TypeScript interface has also been renamed from `NetlifyCMSOptions` to `DecapCMSOptions`. See the [README](./README.md#adding-the-integration) for updated usage examples.
+
 ### Features
 
 * add editorconfig and VSCode settings ([b72176f](https://github.com/jee-r/astro-decap-cms/commit/b72176f925aa7df5091ac735079e59e8dfa74d14))

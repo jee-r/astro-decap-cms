@@ -35,6 +35,8 @@ Usually each of these requires individual set up and configuration. Using this i
 To add Decap CMS to your project, import and use the integration in your
 Astro config file, adding it to the `integrations` array.
 
+> **Note:** If you're upgrading from version 0.x, the integration has been renamed from `NetlifyCMS` to `DecapCMS`. See the [CHANGELOG](./CHANGELOG.md#100) for migration details.
+
 ```js
 // astro.config.mjs
 
