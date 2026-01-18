@@ -133,6 +133,18 @@ previewStyles: [
 
 By default, `astro-decap-cms` injects Netlify’s [Identity Widget](https://github.com/netlify/netlify-identity-widget) across your site to enable authentication. If you only want to inject the widget on the admin route, you can set `disableIdentityWidgetInjection: true`.
 
+## Credits
+
+This project is a maintained fork of [astro-netlify-cms](https://github.com/delucis/astro-netlify-cms) by [@delucis](https://github.com/delucis), updated to support [Decap CMS](https://decapcms.org/) (the community-maintained successor to Netlify CMS).
+
+Some improvements were inspired by the [Advanced Astro fork](https://github.com/advanced-astro/astro-decap-cms), including dependency updates and tooling configurations. These changes were manually integrated rather than cherry-picked to maintain:
+- Conventional commit format
+- Semantic versioning continuity (their fork reset from 0.6.1 to 0.2.0)
+- Consistent package naming and branding
+- Clean project history
+
+Thanks to all contributors and maintainers of both projects.
+
 ## To-do
 
 - Support registering custom preview components to render content as it is edited.
