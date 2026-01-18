@@ -134,6 +134,55 @@ previewStyles: [
 
 By default, `@jee-r/astro-decap-cms` injects Netlify's [Identity Widget](https://github.com/netlify/netlify-identity-widget) across your site to enable authentication. If you only want to inject the widget on the admin route, you can set `disableIdentityWidgetInjection: true`.
 
+## Development
+
+### Prerequisites
+
+This project uses [pnpm](https://pnpm.io/) as package manager. Make sure you have it installed:
+
+```bash
+npm install -g pnpm
+```
+
+### Building the package
+
+To compile the TypeScript source code:
+
+```bash
+pnpm run build
+```
+
+This compiles all files from `src/` to `dist/`.
+
+### Testing
+
+Run the full test suite (builds the package and the demo):
+
+```bash
+pnpm test
+```
+
+This will:
+1. Build the package (`pnpm run build`)
+2. Install demo dependencies (`cd demo && pnpm install --frozen-lockfile`)
+3. Build the demo Astro site (`pnpm run build`)
+
+### Working with the demo
+
+The `demo/` directory contains a working example of the integration.
+
+To run the demo in development mode:
+
+```bash
+cd demo
+pnpm install
+pnpm run dev
+```
+
+This will start:
+- The Astro dev server (typically at `http://localhost:4321`)
+- The Decap CMS proxy server for local content editing
+
 ## Credits
 
 This project is a maintained fork of [astro-netlify-cms](https://github.com/delucis/astro-netlify-cms) by [@delucis](https://github.com/delucis), updated to support [Decap CMS](https://decapcms.org/) (the community-maintained successor to Netlify CMS).
