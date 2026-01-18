@@ -1,4 +1,4 @@
-import type { AstroIntegration, AstroUserConfig } from 'astro';
+import type { AstroIntegration } from 'astro';
 import type { CmsConfig } from 'decap-cms-core';
 import { spawn } from 'node:child_process';
 import type { PreviewStyle } from './types.js';
@@ -50,13 +50,12 @@ export default function NetlifyCMS({
         updateConfig,
       }) => {
         const identityWidgetScript = `import { initIdentity } from '${widgetPath}'; initIdentity('${adminPath}');`;
-        const newConfig: AstroUserConfig = {
+        updateConfig({
           // Default to the URL provided by Netlify when building there. See:
           // https://docs.netlify.com/configure-builds/environment-variables/#deploy-urls-and-metadata
           site: config.site || process.env.URL,
           vite: {
             plugins: [
-              ...(config.vite?.plugins || []),
               AdminDashboard({
                 config: cmsConfig,
                 previewStyles,
@@ -66,12 +65,11 @@ export default function NetlifyCMS({
               }),
             ],
           },
-        };
-        updateConfig(newConfig);
+        });
 
         injectRoute({
           pattern: adminPath,
-          entryPoint: '@jee-r/astro-decap-cms/admin-dashboard.astro',
+          entrypoint: '@jee-r/astro-decap-cms/admin-dashboard.astro',
         });
 
         if (!disableIdentityWidgetInjection) {

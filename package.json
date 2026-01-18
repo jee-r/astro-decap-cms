@@ -17,8 +17,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "prepack": "tsc",
-    "test:smoke": "tsc && cd demo && npm ci && npm run build",
-    "test": "npm run test:smoke",
+    "test:smoke": "tsc && cd demo && pnpm install --frozen-lockfile && pnpm run build",
+    "test": "pnpm run test:smoke",
     "changelog-latest": "conventional-changelog --config ./changelog-config.mjs -r 1",
     "changelog": "conventional-changelog --config ./changelog-config.mjs -i CHANGELOG.md -s",
     "version": "conventional-changelog --config ./changelog-config.mjs -i CHANGELOG.md -s && git add CHANGELOG.md"
@@ -48,6 +48,7 @@
     "astro": "^5.16.11",
     "conventional-changelog-cli": "^5.0.0",
     "conventional-changelog-conventionalcommits": "^9.1.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vite": "6.4.1"
   }
 }
