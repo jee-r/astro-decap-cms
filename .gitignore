@@ -15,3 +15,9 @@ yarn-error.log*
 
 # macOS-specific files
 .DS_Store
+
+# demo artifacts
+demo/.astro/
+demo/package-lock.json
+demo/pnpm-lock.yaml
+demo/pnpm-workspace.yaml
