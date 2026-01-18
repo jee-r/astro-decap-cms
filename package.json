@@ -19,7 +19,9 @@
     "prepack": "tsc",
     "test:smoke": "tsc && cd demo && npm ci && npm run build",
     "test": "npm run test:smoke",
-    "version": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s && git add CHANGELOG.md"
+    "changelog-latest": "conventional-changelog --config ./changelog-config.mjs -r 1",
+    "changelog": "conventional-changelog --config ./changelog-config.mjs -i CHANGELOG.md -s",
+    "version": "conventional-changelog --config ./changelog-config.mjs -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "keywords": [
     "astro",
