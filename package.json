@@ -16,8 +16,9 @@
   },
   "types": "./dist/index.d.ts",
   "scripts": {
-    "prepack": "tsc",
-    "test:smoke": "tsc && cd demo && npm ci && npm run build",
+    "build": "tsc",
+    "prepack": "pnpm run build",
+    "test:smoke": "pnpm run build && cd demo && pnpm install --frozen-lockfile && pnpm run build",
     "test": "pnpm run test:smoke",
     "changelog-latest": "conventional-changelog --config ./changelog-config.mjs -r 1",
     "changelog": "conventional-changelog --config ./changelog-config.mjs -i CHANGELOG.md -s",
