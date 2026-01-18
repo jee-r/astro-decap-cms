@@ -17,6 +17,12 @@ interface NetlifyCMSOptions {
   previewStyles?: PreviewStyle[];
 }
 
+/**
+ * Creates an Astro integration for Decap CMS.
+ *
+ * @param options - Configuration options for the Decap CMS integration
+ * @returns An Astro integration that adds Decap CMS to your project
+ */
 export default function NetlifyCMS({
   disableIdentityWidgetInjection = false,
   adminPath = '/admin',
@@ -25,9 +31,7 @@ export default function NetlifyCMS({
 }: NetlifyCMSOptions) {
   if (!adminPath.startsWith('/')) {
     throw new Error(
-      '`adminPath` option must be a root-relative pathname, starting with "/", got "' +
-        adminPath +
-        '"'
+      `'adminPath' option must be a root-relative pathname, starting with "/", got "${adminPath}"`
     );
   }
   if (adminPath.endsWith('/')) {
