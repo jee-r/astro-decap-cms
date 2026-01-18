@@ -9,7 +9,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^1.9.2",
+    "astro": "^5.16.11",
     "@jee-r/astro-decap-cms": "file:../"
   }
 }
