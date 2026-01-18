@@ -21,10 +21,12 @@
     "test": "npm run test:smoke"
   },
   "keywords": [
-    "astro-component",
-    "cms",
     "astro",
+    "astro-component",
+    "astro-integration",
+    "cms",
     "decap-cms",
+    "headless-cms",
     "netlify-cms"
   ],
   "dependencies": {
