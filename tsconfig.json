@@ -6,5 +6,5 @@
     "outDir": "./dist",
     "skipLibCheck": true
   },
-  "include": ["integration/**/*.ts"]
+  "include": ["src/**/*.ts"]
 }
