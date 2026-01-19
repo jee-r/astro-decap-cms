@@ -1,21 +1,12 @@
 import type { AstroIntegration } from 'astro';
-import type { CmsConfig } from 'decap-cms-core';
 import { spawn } from 'node:child_process';
-import type { PreviewStyle } from './types.js';
+import type { DecapCMSOptions } from './types.js';
 import AdminDashboard from './vite-plugin-admin-dashboard.js';
 
-const widgetPath = '@jee-r/astro-decap-cms/identity-widget';
+// Re-export types for users
+export type { DecapCMSOptions, CmsConfig, CMS } from './types.js';
 
-interface DecapCMSOptions {
-  /**
-   * Path at which the Decap CMS admin dashboard should be served.
-   * @default '/admin'
-   */
-  adminPath?: string;
-  config: Omit<CmsConfig, 'load_config_file' | 'local_backend'>;
-  disableIdentityWidgetInjection?: boolean;
-  previewStyles?: PreviewStyle[];
-}
+const widgetPath = '@jee-r/astro-decap-cms/identity-widget';
 
 /**
  * Creates an Astro integration for Decap CMS.
@@ -26,6 +17,7 @@ interface DecapCMSOptions {
 export default function DecapCMS({
   disableIdentityWidgetInjection = false,
   adminPath = '/admin',
+  cmsVersion = '3.10.0',
   config: cmsConfig,
   previewStyles = [],
 }: DecapCMSOptions) {
@@ -57,6 +49,7 @@ export default function DecapCMS({
           vite: {
             plugins: [
               AdminDashboard({
+                cmsVersion,
                 config: cmsConfig,
                 previewStyles,
                 identityWidget: disableIdentityWidgetInjection
