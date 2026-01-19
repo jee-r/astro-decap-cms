@@ -1,3 +1,30 @@
+## [1.1.0](https://github.com/jee-r/astro-decap-cms/compare/v1.0.0...v1.1.0) (2026-01-19)
+
+### Features
+
+* **cache:** implement unpkg fetch and cache system ([4e667a2](https://github.com/jee-r/astro-decap-cms/commit/4e667a2bf0bb6e49fd3b2c4e3a8e6a02342c2ccd))
+* **config:** add cmsVersion option for custom CMS versions ([7d11121](https://github.com/jee-r/astro-decap-cms/commit/7d111217c974b463682eb14f916339c865f4b272))
+
+### Bug Fixes
+
+* **admin:** implement dynamic CMS loading with proper timing ([d9c0ee3](https://github.com/jee-r/astro-decap-cms/commit/d9c0ee3abdf4236921c117f5de87567a1d8fc5cd))
+* **server:** use dynamic import instead of spawn for decap-server ([66f1c1d](https://github.com/jee-r/astro-decap-cms/commit/66f1c1d9a7859d2cd0ed4062f07f4269bfe54425))
+
+### Documentation
+
+* add breaking change notice and cross-references ([4c040a6](https://github.com/jee-r/astro-decap-cms/commit/4c040a6907e1b7625a3890112161f83ea3410d83))
+* **readme:** add cmsVersion option documentation ([6567400](https://github.com/jee-r/astro-decap-cms/commit/65674005151f1b952fa16760fab3638ce79367fa))
+
+### Chores
+
+* **config:** update ignore files for npm package ([4abd232](https://github.com/jee-r/astro-decap-cms/commit/4abd2325519174d7c15090ee2d67e0df185dde8c))
+* **config:** update TypeScript to ES2020 for import.meta support ([b7b5fb2](https://github.com/jee-r/astro-decap-cms/commit/b7b5fb28ca1d8a1d4450b1cb49850a761dd73eb2))
+* **deps:** remove unused React and decap-cms-app dependencies ([429f2ce](https://github.com/jee-r/astro-decap-cms/commit/429f2cefffe0e484dc47cf247c0e1e5a492ad5d7))
+
+### Code Refactoring
+
+* **types:** centralize types and add global declarations ([8d408e9](https://github.com/jee-r/astro-decap-cms/commit/8d408e9030f2cae5f84c3508bf65bda65d98123d))
+* **vite:** implement unpkg-based CMS loading ([15ba88f](https://github.com/jee-r/astro-decap-cms/commit/15ba88f3707f0429fae37c75f8fe16925efe897e))
 ## [1.0.0](https://github.com/jee-r/astro-decap-cms/compare/v0.6.1...v1.0.0) (2026-01-18)
 
 ### ⚠ BREAKING CHANGES
