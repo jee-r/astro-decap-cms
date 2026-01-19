@@ -35,7 +35,7 @@
     "netlify-cms"
   ],
   "dependencies": {
-    "@types/react": "^19.1.0",
+    "@types/react": "^17.0.50",
     "decap-cms-app": "^3.10.0",
     "decap-server": "^3.5.0",
     "netlify-identity-widget": "^1.9.2",
