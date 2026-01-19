@@ -1,5 +1,4 @@
 import type { AstroIntegration } from 'astro';
-import { spawn } from 'node:child_process';
 import type { DecapCMSOptions } from './types.js';
 import AdminDashboard from './vite-plugin-admin-dashboard.js';
 
@@ -29,8 +28,6 @@ export default function DecapCMS({
   if (adminPath.endsWith('/')) {
     adminPath = adminPath.slice(0, -1);
   }
-
-  let proxy: ReturnType<typeof spawn>;
 
   const DecapCMSIntegration: AstroIntegration = {
     name: 'decap-cms',
@@ -71,16 +68,8 @@ export default function DecapCMS({
       },
 
       'astro:server:start': () => {
-        proxy = spawn('decap-server', {
-          stdio: 'inherit',
-          // Run in shell on Windows to make sure the npm package can be found.
-          shell: process.platform === 'win32',
-        });
-        process.on('exit', () => proxy.kill());
-      },
-
-      'astro:server:done': () => {
-        proxy.kill();
+        // @ts-ignore - Import decap-server to start the proxy server
+        import('decap-server');
       },
     },
   };
