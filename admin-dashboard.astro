@@ -9,10 +9,25 @@
     content="Admin dashboard for managing website content"
     />
     <title>Content Manager</title>
+    <script is:inline>window.CMS_MANUAL_INIT = true;</script>
     <script>
       import options from 'virtual:astro-decap-cms/user-config';
       import initCMS from './dist/cms';
-      initCMS(options);
+
+      // Wait for decap-cms.js to load
+      const script = document.createElement('script');
+      script.src = '/_decap-cms/decap-cms.js';
+      script.onload = () => {
+        if (window.CMS) {
+          initCMS({ cms: window.CMS, ...options });
+        } else {
+          console.error('DecapCMS failed to load');
+        }
+      };
+      script.onerror = () => {
+        console.error('Failed to load DecapCMS script');
+      };
+      document.head.appendChild(script);
     </script>
     <style is:global>
       /* Workaround for https://github.com/netlify/netlify-cms/issues/5092 */
