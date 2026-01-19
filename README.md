@@ -73,6 +73,27 @@ Determines the route where the Decap CMS admin dashboard will be available on yo
 
 Feeling nostalgic for WordPress? You could set this to `'/wp-admin'`!
 
+#### `cmsVersion`
+
+**Type:** `string`
+**Default:** `'3.10.0'`
+
+Specifies which version of Decap CMS to use. The CMS is automatically fetched from unpkg and cached locally for optimal performance.
+
+Supports:
+- Exact versions: `'3.10.0'`
+- Semver ranges: `'^3.0.0'`
+- Latest: `'latest'`
+
+```js
+DecapCMS({
+  cmsVersion: '^3.0.0', // Use latest 3.x version
+  config: { /* ... */ }
+})
+```
+
+The CMS file is automatically cached in `node_modules/.cache/` after the first build, enabling offline development and faster subsequent builds.
+
 #### `config`
 
 **Type:** `CmsConfig`
