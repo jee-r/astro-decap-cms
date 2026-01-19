@@ -4,10 +4,17 @@ dist
 # dependencies
 node_modules/
 
+# cache
+.cache/
+node_modules/.cache/
+
 # logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# lock files (keep pnpm-lock.yaml, ignore npm)
+package-lock.json
 
 # environment variables
 .env
@@ -20,3 +27,4 @@ yarn-error.log*
 demo/.astro/
 demo/package-lock.json
 demo/pnpm-workspace.yaml
+demo/dist/

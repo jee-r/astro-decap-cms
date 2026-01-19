@@ -1,3 +1,24 @@
-demo
-integration
-header.png
+# Development files
+demo/
+src/
+.github/
+.vscode/
+
+# Config files
+.editorconfig
+tsconfig.json
+changelog-config.mjs
+renovate.json
+
+# Assets
+DecAp.svg
+
+# Logs
+*.log
+
+# Cache
+.cache/
+node_modules/.cache/
+
+# OS files
+.DS_Store
