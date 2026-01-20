@@ -33,7 +33,7 @@ function generateVirtualConfigModule({
   return `${imports.join('\n')}
 ${identityWidget}
 export default {
-  config: JSON.parse('${JSON.stringify(config)}'),
+  config: ${JSON.stringify(config)},
   previewStyles: [${styles.join(',')}],
 };
 `;

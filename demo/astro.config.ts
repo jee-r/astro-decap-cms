@@ -35,7 +35,8 @@ export default defineConfig({
               {
                 name: 'title',
                 widget: 'string',
-                label: 'Post Title',
+                label: "Post's Title",
+                hint: "The article's main title",
               },
               {
                 name: 'publishDate',
