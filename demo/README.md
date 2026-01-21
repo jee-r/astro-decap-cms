@@ -1,61 +1,66 @@
-# Astro Starter Kit: Blog
+# Astro Blog with Decap CMS
 
-```sh
-pnpm create astro@latest -- --template blog
-```
+This demo is based on [the Astro blog starter template](https://astro.new/blog?on=github).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+It adds:
 
-Features:
+- [Decap CMS](https://decapcms.org/) dashboard at `/admin`
+- Simple markdown preview styling in Decap CMS
+- [Local proxy server](https://decapcms.org/docs/working-with-a-local-git-repository/) for local content updates via the CMS
+- Netlify Identity for authenticating with the admin app in production
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+## Quick deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jee-r/astro-decap-cms)
+
+☝️ Click this button to copy this project to your own GitHub (or GitLab)
+account and set up continuous deployment with Netlify as if by magic. ✨
+
+Once you've got the project set up, you do need to
+[activate Netlify Identity in the Netlify UI](https://docs.netlify.com/visitor-access/identity/) and then enable
+["Git Gateway"](https://docs.netlify.com/visitor-access/git-gateway/) to allow e-mail/password authentication.
+
+## Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command           | Action                                                    |
+| :---------------- | :-------------------------------------------------------- |
+| `pnpm install`    | Installs dependencies                                     |
+| `pnpm dev`        | Starts local dev server & Decap CMS proxy at `:4321`      |
+| `pnpm build`      | Build your production site to `./dist/`                   |
+| `pnpm preview`    | Preview your build locally before deploying               |
 
 ## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 ├── public/
 ├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+│   ├── assets/           # Images optimized by Astro
+│   ├── components/       # Astro components
+│   ├── content/
+│   │   └── blog/         # Blog posts (markdown/MDX)
+│   ├── layouts/
+│   ├── pages/
+│   └── styles/
+│       ├── global.css           # Site-wide styles
+│       └── cms-preview.css      # Preview styles for Decap CMS
+├── astro.config.mjs      # Includes DecapCMS integration
+├── netlify.toml
+└── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Key points:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+- **`src/content/blog/`** — Your blog posts as Markdown or MDX files. Decap CMS manages these files through the `/admin` interface.
+- **`src/styles/cms-preview.css`** — CSS styles applied to the preview pane in Decap CMS for a better editing experience.
+- **`astro.config.mjs`** — Configures the Decap CMS integration with collection schema and preview styles.
 
 ## 👀 Want to learn more?
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- [@jee-r/astro-decap-cms documentation](../README.md)
+- [Decap CMS documentation](https://decapcms.org/docs/)
+- [Astro documentation](https://docs.astro.build)
 
 ## Credit
 
