@@ -1,0 +1,89 @@
+/* Simple Markdown preview styles for Decap CMS */
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+	line-height: 1.6;
+	color: #333;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2em;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+	line-height: 1.25;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+
+/* Paragraphs and spacing */
+p {
+	margin-bottom: 1em;
+}
+
+/* Links */
+a {
+	color: #0969da;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Images */
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 1.5em auto;
+}
+
+/* Lists */
+ul, ol {
+	margin-bottom: 1em;
+	padding-left: 2em;
+}
+
+li {
+	margin-bottom: 0.25em;
+}
+
+/* Code */
+code {
+	background: #f6f8fa;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 0.9em;
+}
+
+pre {
+	background: #f6f8fa;
+	padding: 1em;
+	border-radius: 6px;
+	overflow-x: auto;
+}
+
+pre code {
+	background: none;
+	padding: 0;
+}
+
+/* Blockquotes */
+blockquote {
+	border-left: 4px solid #ddd;
+	padding-left: 1em;
+	margin-left: 0;
+	color: #666;
+}
+
+/* Horizontal rule */
+hr {
+	border: none;
+	border-top: 1px solid #ddd;
+	margin: 2em 0;
+}
