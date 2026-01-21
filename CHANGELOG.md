@@ -1,3 +1,25 @@
+## [1.1.1](https://github.com/jee-r/astro-decap-cms/compare/v1.1.0...v1.1.1) (2026-01-21)
+
+### Bug Fixes
+
+* **vite:** remove JSON.parse wrapper in virtual module ([2e48f37](https://github.com/jee-r/astro-decap-cms/commit/2e48f370b7e16d87cd9d54a6e67e314694658717))
+
+### Documentation
+
+* **demo:** update README for new template structure ([8873b8d](https://github.com/jee-r/astro-decap-cms/commit/8873b8df611fc9a05fc932ce5e2fad363a8c1062))
+
+### Styles
+
+* **demo:** add CMS preview styles ([bd6ecda](https://github.com/jee-r/astro-decap-cms/commit/bd6ecda7f060eb9d2f12ed0a2a46d3f053862db2))
+
+### Chores
+
+* **demo:** add DecapCMS integration ([edf494c](https://github.com/jee-r/astro-decap-cms/commit/edf494c6239db0dcd0ce07b2eee79c618dcb5b94))
+* **demo:** configure Netlify deployment ([8fc8b2a](https://github.com/jee-r/astro-decap-cms/commit/8fc8b2ac8dbfbcdbcf35a7c4a22f7987ebee8ca1))
+
+### Code Refactoring
+
+* **demo:** replace with Astro 5 blog template ([9ccab62](https://github.com/jee-r/astro-decap-cms/commit/9ccab624a5a2d4af646bb11104db36e70f2554be))
 ## [1.1.0](https://github.com/jee-r/astro-decap-cms/compare/v1.0.0...v1.1.0) (2026-01-19)
 
 ### Features
