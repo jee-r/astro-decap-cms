@@ -1,7 +1,7 @@
 <div align="center">
     <img src="./DecAp.svg" alt="DecAP" height="120" />
   <p>
-    Add <a href="https://decapcms.org/">Decap CMS</a>'s admin dashboard
+    Add <a href="https://decapcms.org/">Decap CMS</a> or <a href="https://sveltia.com/cms">Sveltia CMS</a>'s admin dashboard
     to any <a href="https://astro.build/">Astro</a> project
   </p>
 </div>
@@ -9,46 +9,80 @@
 ## Installation
 
 ```bash
-npm i @jee-r/astro-decap-cms
+npm install @jee-r/astro-decap-cms
+# or
+pnpm add @jee-r/astro-decap-cms
 ```
 
 ## What is this?
 
 This is an integration for the [Astro](https://astro.build/) site builder,
-which adds support for [Decap CMS](https://decapcms.org/), an
-open-source, Git-based content management system.
+which adds support for [Decap CMS](https://decapcms.org/) or [Sveltia CMS](https://sveltia.com/cms), open-source, Git-based content management systems.
 
 Adding the integration will:
 
-- Add the Decap CMS dashboard at `/admin` (or another route if you prefer)
-- Inject Netlify’s [Identity Widget](https://github.com/netlify/netlify-identity-widget) across your site to support logging in to the admin app
-- Run a [local proxy server](https://decapcms.org/docs/beta-features/#working-with-a-local-git-repository) in `dev` mode to allow local content updates via the CMS
+- Add the CMS admin dashboard at `/admin` (or another route if you prefer)
+- Inject Netlify's [Identity Widget](https://github.com/netlify/netlify-identity-widget) across your site to support logging in (Decap CMS only)
+- Run a [local proxy server](https://decapcms.org/docs/beta-features/#working-with-a-local-git-repository) in `dev` mode to allow local content updates (Decap CMS only)
 
 Usually each of these requires individual set up and configuration. Using this integration, you configure your CMS once in `astro.config.mjs`, sit back, and enjoy!
 
 > Looking for a quick way to get started? Check out the [demo](./demo) included in this repository.
 
+> **Migrating from Decap CMS to Sveltia CMS?** See the [official migration guide](https://sveltiacms.app/en/docs/migration/netlify-decap-cms).
+
+## Upgrading from v1.x
+
+> **Breaking changes in v2.0:** See the [migration section](#migration-from-v1x) below.
+
 ## Usage
 
 ### Adding the integration
 
-To add Decap CMS to your project, import and use the integration in your
+To add the CMS to your project, import and use the integration in your
 Astro config file, adding it to the `integrations` array.
 
-> **Note:** If you're upgrading from version 0.x, the integration has been renamed from `NetlifyCMS` to `DecapCMS`. See the [CHANGELOG](./CHANGELOG.md#100) for migration details.
+**With Decap CMS (default):**
 
 ```js
 // astro.config.mjs
 
 import { defineConfig } from 'astro/config';
-import DecapCMS from '@jee-r/astro-decap-cms';
+import CMS from '@jee-r/astro-decap-cms';
 
 export default defineConfig({
   integrations: [
-    DecapCMS({
+    CMS({
       config: {
         backend: {
           name: 'git-gateway',
+          branch: 'main',
+        },
+        collections: [
+          // Content collections
+        ],
+      },
+    }),
+  ],
+});
+```
+
+**With Sveltia CMS:**
+
+```js
+// astro.config.mjs
+
+import { defineConfig } from 'astro/config';
+import CMS from '@jee-r/astro-decap-cms';
+
+export default defineConfig({
+  integrations: [
+    CMS({
+      cmsType: 'sveltia',
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'owner/repo',
           branch: 'main',
         },
         collections: [
@@ -64,21 +98,31 @@ export default defineConfig({
 
 You can pass an options object to the integration to configure how it behaves.
 
+#### `cmsType`
+
+**Type:** `'decap' | 'sveltia'`
+**Default:** `'decap'`
+
+Which CMS to use. When set to `'sveltia'`:
+- [Sveltia CMS](https://sveltia.com/cms) is loaded instead of Decap CMS
+- The Netlify Identity Widget is automatically disabled
+- The local proxy server (`decap-server`) is not started in dev mode
+
 #### `adminPath`
 
 **Type:** `string`
 **Default:** `'/admin'`
 
-Determines the route where the Decap CMS admin dashboard will be available on your site.
+Determines the route where the CMS admin dashboard will be available on your site.
 
 Feeling nostalgic for WordPress? You could set this to `'/wp-admin'`!
 
 #### `cmsVersion`
 
 **Type:** `string`
-**Default:** `'3.10.0'`
+**Default:** `'3.10.0'` (Decap CMS) / `'latest'` (Sveltia CMS)
 
-Specifies which version of Decap CMS to use. The CMS is automatically fetched from unpkg and cached locally for optimal performance.
+Specifies which version of the CMS to use. The CMS is automatically fetched from unpkg and cached locally for optimal performance.
 
 Supports:
 - Exact versions: `'3.10.0'`
@@ -86,7 +130,7 @@ Supports:
 - Latest: `'latest'`
 
 ```js
-DecapCMS({
+CMS({
   cmsVersion: '^3.0.0', // Use latest 3.x version
   config: { /* ... */ }
 })
@@ -98,22 +142,20 @@ The CMS file is automatically cached in `node_modules/.cache/` after the first b
 
 **Type:** `CmsConfig`
 
-This option is **required**. It allows you to configure Decap CMS with the
-same options you would use when using Decap CMS’s `config.yml` file format.
+This option is **required**. It allows you to configure the CMS with the
+same options you would use when using Decap CMS's `config.yml` file format.
 
-You can see [a full list of configuration options in the Decap CMS docs](https://decapcms.org/docs/configuration-options/).
+You can see [a full list of configuration options in the Decap CMS docs](https://decapcms.org/docs/configuration-options/). Sveltia CMS uses the same configuration format.
 
 At a minimum, you _must_ set the `backend` and `collections` options:
 
 ```js
 config: {
-  // Use Netlify’s “Git Gateway” authentication and target our default branch
   backend: {
     name: 'git-gateway',
     branch: 'main',
   },
   collections: [
-    // Define a blog post collection
     {
       name: 'posts',
       label: 'Blog Posts',
@@ -129,17 +171,19 @@ config: {
 };
 ```
 
+> **Note:** Sveltia CMS does not support the `git-gateway` backend. See [supported backends](https://sveltiacms.app/en/docs/backends).
+
 #### `previewStyles`
 
 **Type:** `Array<string | [string, { raw: true }]>`
 
-Sets custom CSS styles to apply in the Decap CMS preview pane.
+Sets custom CSS styles to apply in the CMS preview pane.
 
 You can provide URLs to external CSS stylesheets (Google Fonts for example), paths to local CSS files in your project, or even raw CSS strings:
 
 ```js
 previewStyles: [
-  // Path to a local CSS file, relative to your project’s root directory
+  // Path to a local CSS file, relative to your project's root directory
   '/src/styles/main.css',
   // An npm module identifier
   '@fontsource/roboto',
@@ -153,9 +197,35 @@ previewStyles: [
 #### `disableIdentityWidgetInjection`
 
 **Type:** `boolean`
-**Default:** `false`
+**Default:** `false` (automatically `true` for Sveltia CMS)
 
 By default, `@jee-r/astro-decap-cms` injects Netlify's [Identity Widget](https://github.com/netlify/netlify-identity-widget) across your site to enable authentication. If you only want to inject the widget on the admin route, you can set `disableIdentityWidgetInjection: true`.
+
+This option is automatically set to `true` when using Sveltia CMS, as it does not use Netlify Identity.
+
+## Migration from v1.x
+
+Version 2.0 introduces support for [Sveltia CMS](https://sveltia.com/cms) and includes the following breaking changes:
+
+- The default export has been renamed from `DecapCMS` to `CMS`
+- A new `cmsType` option allows switching between Decap CMS and Sveltia CMS
+- Internal virtual module paths have been updated (only relevant if you were importing internals)
+
+```diff
+- import DecapCMS from '@jee-r/astro-decap-cms';
++ import CMS from '@jee-r/astro-decap-cms';
+
+  export default defineConfig({
+    integrations: [
+-     DecapCMS({
++     CMS({
+        config: { /* ... */ }
+      }),
+    ],
+  });
+```
+
+If you're also switching from Decap CMS to Sveltia CMS, see the [official Sveltia CMS migration guide](https://sveltiacms.app/en/docs/migration/netlify-decap-cms) for CMS-specific changes (backend configuration, unsupported features, etc.).
 
 ## Development
 
@@ -179,7 +249,7 @@ This compiles all files from `src/` to `dist/`.
 
 ### Testing
 
-Run the full test suite (builds the package and the demo):
+Run the full test suite (builds the package and the demo for both CMS types):
 
 ```bash
 pnpm test
@@ -187,8 +257,15 @@ pnpm test
 
 This will:
 1. Build the package (`pnpm run build`)
-2. Install demo dependencies (`cd demo && pnpm install --frozen-lockfile`)
-3. Build the demo Astro site (`pnpm run build`)
+2. Smoke test with Decap CMS (`pnpm run test:smoke:decap`)
+3. Smoke test with Sveltia CMS (`pnpm run test:smoke:sveltia`)
+
+You can also run smoke tests individually:
+
+```bash
+pnpm run test:smoke:decap
+pnpm run test:smoke:sveltia
+```
 
 ### Working with the demo
 
@@ -197,14 +274,14 @@ The `demo/` directory contains a working example of the integration.
 To run the demo in development mode:
 
 ```bash
-cd demo
-pnpm install
-pnpm run dev
+# With Decap CMS
+pnpm run dev:demo:decap
+
+# With Sveltia CMS
+pnpm run dev:demo:sveltia
 ```
 
-This will start:
-- The Astro dev server (typically at `http://localhost:4321`)
-- The Decap CMS proxy server for local content editing
+This will start the Astro dev server (typically at `http://localhost:4321`). With Decap CMS, a local proxy server is also started for content editing.
 
 ## Credits
 
