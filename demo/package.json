@@ -3,8 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev:decap": "astro dev",
+    "dev:sveltia": "CMS_TYPE=sveltia astro dev",
+    "build:decap": "astro build",
+    "build:sveltia": "CMS_TYPE=sveltia astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

@@ -3,7 +3,14 @@
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
-import DecapCMS from '@jee-r/astro-decap-cms';
+import CMS from '@jee-r/astro-decap-cms';
+
+const cmsType = process.env.CMS_TYPE || 'decap';
+
+const backend =
+	cmsType === 'sveltia'
+		? /** @type {const} */ ({ name: 'test-repo' })
+		: /** @type {const} */ ({ name: 'git-gateway', branch: 'main' });
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,18 +18,16 @@ export default defineConfig({
 	integrations: [
 		mdx(),
 		sitemap(),
-		DecapCMS({
+		CMS({
+			cmsType,
 			previewStyles: [
 				'/src/styles/global.css',
 				'/src/styles/cms-preview.css',
 			],
 			config: {
-				backend: {
-					name: 'git-gateway',
-					branch: 'main',
-				},
+				backend,
 				media_folder: 'src/assets',
-				public_folder: '../../assets',
+				public_folder: '/assets',
 				collections: [
 					{
 						name: 'blog',
