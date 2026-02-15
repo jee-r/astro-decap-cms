@@ -2,6 +2,7 @@ import { InitCmsOptions } from './types';
 
 export default function initCMS({
   cms,
+  cmsType,
   config,
   previewStyles = [],
 }: InitCmsOptions) {
@@ -12,10 +13,10 @@ export default function initCMS({
 
   cms.init({
     config: {
-      // Don’t try to load config.yml as we’re providing the config below
+      // Don't try to load config.yml as we're providing the config below
       load_config_file: false,
-      // Enable use of the Netlify CMS proxy server when working locally
-      local_backend: true,
+      // Enable use of the proxy server when working locally (Decap CMS only)
+      ...(cmsType === 'decap' ? { local_backend: true } : {}),
       ...mediaDefaults,
       ...config,
     },
@@ -24,7 +25,7 @@ export default function initCMS({
   /**
    * One drawback of using Netlify CMS is that it registers all preview
    * styles globally — not scoped to a specific collection.
-   * You lose Astro components’ scoped styling anyway by being forced
+   * You lose Astro components' scoped styling anyway by being forced
    * to use React, but just be extra careful.
    *
    * The (undocumented?) `raw: true` setting treats the first argument as

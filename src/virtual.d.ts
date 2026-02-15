@@ -1,8 +1,9 @@
-declare module 'virtual:astro-decap-cms/user-config' {
+declare module 'virtual:astro-cms/user-config' {
   import type { CmsConfig } from 'decap-cms-core';
-  import type { NormalizedPreviewStyle } from './types';
+  import type { CmsType, NormalizedPreviewStyle } from './types';
 
   const userConfig: {
+    cmsType: CmsType;
     config: CmsConfig;
     previewStyles: NormalizedPreviewStyle[];
   };
@@ -16,7 +17,7 @@ declare global {
      */
     CMS_MANUAL_INIT?: boolean;
     /**
-     * The Decap CMS instance available after loading decap-cms.js
+     * The CMS instance available after loading the CMS script
      */
     CMS?: import('decap-cms-core').CMS;
   }

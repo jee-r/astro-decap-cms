@@ -1,16 +1,18 @@
 import type { CmsConfig } from 'decap-cms-core';
 import type { Plugin } from 'vite';
-import type { PreviewStyle } from './types';
-import { getDecapCmsJs, resolveVersion } from './cache.js';
+import type { CmsType, PreviewStyle } from './types';
+import { getCmsJs, resolveVersion } from './cache.js';
 
-const virtualModuleId = 'virtual:astro-decap-cms/user-config';
+const virtualModuleId = 'virtual:astro-cms/user-config';
 const resolvedVirtualModuleId = '\0' + virtualModuleId;
 
 function generateVirtualConfigModule({
+  cmsType,
   config,
   previewStyles = [],
   identityWidget,
 }: {
+  cmsType: CmsType;
   config: CmsConfig;
   previewStyles: Array<string | [string] | [string, { raw: boolean }]>;
   identityWidget: string;
@@ -33,6 +35,7 @@ function generateVirtualConfigModule({
   return `${imports.join('\n')}
 ${identityWidget}
 export default {
+  cmsType: ${JSON.stringify(cmsType)},
   config: ${JSON.stringify(config)},
   previewStyles: [${styles.join(',')}],
 };
@@ -40,73 +43,73 @@ export default {
 }
 
 export default function AdminDashboardPlugin({
+  cmsType,
   cmsVersion,
   config,
   previewStyles,
   identityWidget,
 }: {
+  cmsType: CmsType;
   cmsVersion: string;
   config: Omit<CmsConfig, 'load_config_file' | 'local_backend'>;
   previewStyles: PreviewStyle[];
   identityWidget: string;
 }): Plugin {
-  const version = resolveVersion(cmsVersion);
-  let decapCmsContent: string | undefined;
+  const version = resolveVersion(cmsVersion, cmsType);
+  let cmsContent: string | undefined;
   let rootDir: string;
 
   return {
-    name: 'vite-plugin-decap-cms-admin-dashboard',
+    name: 'vite-plugin-cms-admin-dashboard',
 
     config(_, { command }) {
-      // Dynamically set local_backend based on dev/build mode
-      (config as CmsConfig).local_backend = command === 'serve';
+      // Dynamically set local_backend based on dev/build mode (only for Decap CMS)
+      if (cmsType === 'decap') {
+        (config as CmsConfig).local_backend = command === 'serve';
+      }
       // Don't try to load config.yml
       (config as CmsConfig).load_config_file = false;
     },
 
     configResolved(resolvedConfig) {
-      // Get the root directory of the user's project
       rootDir = resolvedConfig.root;
     },
 
     async buildStart() {
-      // Fetch/cache the decap-cms.js file at build start
-      if (!decapCmsContent) {
-        decapCmsContent = await getDecapCmsJs(rootDir, version);
+      if (!cmsContent) {
+        cmsContent = await getCmsJs(rootDir, version, cmsType);
       }
     },
 
     async configureServer(server) {
-      // Fetch/cache the decap-cms.js file on server start
-      if (!decapCmsContent) {
-        decapCmsContent = await getDecapCmsJs(rootDir, version);
+      if (!cmsContent) {
+        cmsContent = await getCmsJs(rootDir, version, cmsType);
       }
 
-      // Serve it at /_decap-cms/decap-cms.js
-      server.middlewares.use('/_decap-cms/decap-cms.js', (_req, res) => {
+      server.middlewares.use('/_cms/cms.js', (_req, res) => {
         res.setHeader('Content-Type', 'application/javascript');
         res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
-        res.end(decapCmsContent);
+        res.end(cmsContent);
       });
     },
 
     resolveId(id) {
-      if (id === '/_decap-cms/decap-cms.js') {
+      if (id === '/_cms/cms.js') {
         return id;
       }
       if (id === virtualModuleId) return resolvedVirtualModuleId;
     },
 
     async load(id) {
-      if (id === '/_decap-cms/decap-cms.js') {
-        // Return the cached content for build
-        if (!decapCmsContent) {
-          decapCmsContent = await getDecapCmsJs(rootDir, version);
+      if (id === '/_cms/cms.js') {
+        if (!cmsContent) {
+          cmsContent = await getCmsJs(rootDir, version, cmsType);
         }
-        return decapCmsContent;
+        return cmsContent;
       }
       if (id === resolvedVirtualModuleId)
         return generateVirtualConfigModule({
+          cmsType,
           config,
           previewStyles,
           identityWidget,
@@ -114,14 +117,13 @@ export default function AdminDashboardPlugin({
     },
 
     async generateBundle() {
-      // Emit the decap-cms.js file as a static asset during build
-      if (!decapCmsContent) {
-        decapCmsContent = await getDecapCmsJs(rootDir, version);
+      if (!cmsContent) {
+        cmsContent = await getCmsJs(rootDir, version, cmsType);
       }
       this.emitFile({
         type: 'asset',
-        fileName: '_decap-cms/decap-cms.js',
-        source: decapCmsContent,
+        fileName: '_cms/cms.js',
+        source: cmsContent,
       });
     },
   };
