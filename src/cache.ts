@@ -1,5 +1,24 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import type { CmsType } from './types';
+
+/** CDN URLs for each CMS type */
+const CDN_URLS: Record<CmsType, (version: string) => string> = {
+  decap: (version) => `https://unpkg.com/decap-cms@${version}/dist/decap-cms.js`,
+  sveltia: (version) => `https://unpkg.com/@sveltia/cms@${version}/dist/sveltia-cms.js`,
+};
+
+/** Default versions for each CMS type */
+const DEFAULT_VERSIONS: Record<CmsType, string> = {
+  decap: '3.10.0',
+  sveltia: 'latest',
+};
+
+/** Human-readable CMS names for log messages */
+const CMS_NAMES: Record<CmsType, string> = {
+  decap: 'Decap CMS',
+  sveltia: 'Sveltia CMS',
+};
 
 /**
  * Get the cache directory path in the user's project
@@ -10,58 +29,62 @@ function getCacheDir(rootDir: string): string {
 }
 
 /**
- * Generate cache filename based on version
+ * Generate cache filename based on CMS type and version
  */
-function getCacheFilename(version: string): string {
-  return `decap-cms-${version}.js`;
+function getCacheFilename(cmsType: CmsType, version: string): string {
+  return `${cmsType}-cms-${version}.js`;
 }
 
 /**
- * Fetch decap-cms.js from unpkg
+ * Fetch CMS script from unpkg
  */
-async function fetchFromUnpkg(version: string): Promise<string> {
-  const url = `https://unpkg.com/decap-cms@${version}/dist/decap-cms.js`;
+async function fetchFromCdn(cmsType: CmsType, version: string): Promise<string> {
+  const url = CDN_URLS[cmsType](version);
+  const name = CMS_NAMES[cmsType];
 
-  console.log(`📦 Fetching Decap CMS ${version} from unpkg...`);
+  console.log(`📦 Fetching ${name} ${version} from unpkg...`);
 
   const response = await fetch(url);
 
   if (!response.ok) {
     throw new Error(
-      `Failed to fetch decap-cms@${version} from unpkg: ${response.status} ${response.statusText}`
+      `Failed to fetch ${name}@${version} from unpkg: ${response.status} ${response.statusText}`
     );
   }
 
   const content = await response.text();
 
   console.log(
-    `✓ Downloaded decap-cms.js (${(content.length / 1024 / 1024).toFixed(2)} MB)`
+    `✓ Downloaded ${name} (${(content.length / 1024 / 1024).toFixed(2)} MB)`
   );
 
   return content;
 }
 
 /**
- * Get or fetch decap-cms.js from cache
+ * Get or fetch CMS script from cache
  * @param rootDir - The root directory of the user's project (from Vite config)
  * @param version - The version to fetch (e.g., '3.10.0', '^3.0.0', 'latest')
+ * @param cmsType - The CMS type ('decap' or 'sveltia')
  */
-export async function getDecapCmsJs(
+export async function getCmsJs(
   rootDir: string,
-  version: string
+  version: string,
+  cmsType: CmsType
 ): Promise<string> {
   const cacheDir = getCacheDir(rootDir);
-  const filename = getCacheFilename(version);
+  const filename = getCacheFilename(cmsType, version);
   const cachePath = join(cacheDir, filename);
+  const name = CMS_NAMES[cmsType];
 
   // Check if already cached
   if (existsSync(cachePath)) {
-    console.log(`✓ Using cached Decap CMS ${version}`);
+    console.log(`✓ Using cached ${name} ${version}`);
     return readFileSync(cachePath, 'utf-8');
   }
 
-  // Fetch from unpkg
-  const content = await fetchFromUnpkg(version);
+  // Fetch from CDN
+  const content = await fetchFromCdn(cmsType, version);
 
   // Save to cache
   mkdirSync(cacheDir, { recursive: true });
@@ -72,14 +95,12 @@ export async function getDecapCmsJs(
 }
 
 /**
- * Resolve version (supports 'latest', semver ranges, exact versions)
- * For now, we just use the provided version as-is and let unpkg resolve it
+ * Resolve version for a given CMS type
+ * Uses CMS-specific defaults when no version is provided
  */
-export function resolveVersion(version?: string): string {
-  // If no version specified, use a safe default
+export function resolveVersion(version?: string, cmsType: CmsType = 'decap'): string {
   if (!version) {
-    return '3.10.0';
+    return DEFAULT_VERSIONS[cmsType];
   }
-
   return version;
 }
