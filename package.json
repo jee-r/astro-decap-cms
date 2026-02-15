@@ -17,9 +17,12 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "dev:demo": "pnpm run build && cd demo && pnpm install && pnpm run dev",
+    "dev:demo:decap": "pnpm run build && cd demo && pnpm install && pnpm run dev:decap",
+    "dev:demo:sveltia": "pnpm run build && cd demo && pnpm install && pnpm run dev:sveltia",
     "prepack": "pnpm run build",
-    "test:smoke": "pnpm run build && cd demo && pnpm install --frozen-lockfile && pnpm run build",
+    "test:smoke:decap": "cd demo && pnpm install --frozen-lockfile && pnpm run build:decap",
+    "test:smoke:sveltia": "cd demo && pnpm install --frozen-lockfile && pnpm run build:sveltia",
+    "test:smoke": "pnpm run build && pnpm run test:smoke:decap && pnpm run test:smoke:sveltia",
     "test": "pnpm run test:smoke",
     "changelog-latest": "conventional-changelog --config ./changelog-config.mjs -r 1",
     "changelog": "conventional-changelog --config ./changelog-config.mjs -i CHANGELOG.md -s",
@@ -31,6 +34,7 @@
     "astro-integration",
     "cms",
     "decap-cms",
+    "sveltia-cms",
     "headless-cms",
     "netlify-cms"
   ],
