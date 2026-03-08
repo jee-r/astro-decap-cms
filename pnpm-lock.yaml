@@ -26,7 +26,7 @@ importers:
         version: 5.0.0(conventional-commits-filter@5.0.0)
       conventional-changelog-conventionalcommits:
         specifier: ^9.1.0
-        version: 9.1.0
+        version: 9.3.0
       decap-cms-core:
         specifier: ^3.10.0
         version: 3.10.1(@emotion/react@11.14.0(@types/react@19.2.14)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.14)(react@19.2.3))(@types/react@19.2.14)(react@19.2.3))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.14))(@types/node@25.0.9)(@types/react@19.2.14)(decap-cms-editor-component-image@3.2.1(react@19.2.3))(decap-cms-lib-auth@3.0.6(immutable@3.8.2)(lodash@4.17.23)(uuid@8.3.2))(decap-cms-lib-util@3.4.0(immutable@3.8.2)(lodash@4.17.23))(decap-cms-lib-widgets@3.3.0(immutable@3.8.2)(lodash@4.17.23))(decap-cms-ui-default@3.5.0(@emotion/react@11.14.0(@types/react@19.2.14)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.14)(react@19.2.3))(@types/react@19.2.14)(react@19.2.3))(lodash@4.17.23)(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(immutable@3.8.2)(lodash@4.17.23)(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react-immutable-proptypes@2.2.0(immutable@3.8.2))(react@19.2.3)
@@ -1293,8 +1293,8 @@ packages:
     resolution: {integrity: sha512-eOvlTO6OcySPyyyk8pKz2dP4jjElYunj9hn9/s0OB+gapTO8zwS9UQWrZ1pmF2hFs3vw1xhonOLGcGjy/zgsuA==}
     engines: {node: '>=18'}
 
-  conventional-changelog-conventionalcommits@9.1.0:
-    resolution: {integrity: sha512-MnbEysR8wWa8dAEvbj5xcBgJKQlX/m0lhS8DsyAAWDHdfs2faDJxTgzRYlRYpXSe7UiKrIIlB4TrBKU9q9DgkA==}
+  conventional-changelog-conventionalcommits@9.3.0:
+    resolution: {integrity: sha512-kYFx6gAyjSIMwNtASkI3ZE99U1fuVDJr0yTYgVy+I2QG46zNZfl2her+0+eoviG82c5WQvW1jMt1eOQTeJLodA==}
     engines: {node: '>=18'}
 
   conventional-changelog-core@8.0.0:
@@ -4688,7 +4688,7 @@ snapshots:
     dependencies:
       compare-func: 2.0.0
 
-  conventional-changelog-conventionalcommits@9.1.0:
+  conventional-changelog-conventionalcommits@9.3.0:
     dependencies:
       compare-func: 2.0.0
 
