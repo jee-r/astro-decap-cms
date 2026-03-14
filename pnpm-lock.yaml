@@ -12,8 +12,8 @@ importers:
         specifier: ^3.5.0
         version: 3.5.2
       netlify-identity-widget:
-        specifier: ^1.9.2
-        version: 1.9.2
+        specifier: ^2.0.0
+        version: 2.0.3
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.4
@@ -2322,8 +2322,9 @@ packages:
     resolution: {integrity: sha512-Z4SmBUweYa09+o6pG+eASabEpP6QkQ70yHj351pQoEXIs8uHbaU2DWVmzBANKgflPa47A50PtB2+NgRpQvr7vA==}
     engines: {node: '>= 10'}
 
-  netlify-identity-widget@1.9.2:
-    resolution: {integrity: sha512-IbS1JHhs7BflCCvp3C9f6tmNSZqbyBhZ4Gs5+Qxt4IlPybTOVv0PqJ4TAsA7uxh1R+oXOAmk0OOMAkEaPYeCtA==}
+  netlify-identity-widget@2.0.3:
+    resolution: {integrity: sha512-kJxVUp3frEEN5cON/JDZKiyKwXB5NaFIGmBjqhAbOPCr483g9yhdjBWkXmYX9g8S6lKOSYi98gF8ROCrUK7tvw==}
+    engines: {node: '>=20'}
 
   nlcst-to-string@4.0.0:
     resolution: {integrity: sha512-YKLBCcUYKAg0FNlOBT6aI91qFmSiFKiluk655WzPF+DDMA02qIyy8uiRqI8QXtcFpEvll12LpL5MXqEmAZ+dcA==}
@@ -6083,7 +6084,7 @@ snapshots:
 
   neotraverse@0.6.18: {}
 
-  netlify-identity-widget@1.9.2: {}
+  netlify-identity-widget@2.0.3: {}
 
   nlcst-to-string@4.0.0:
     dependencies:
