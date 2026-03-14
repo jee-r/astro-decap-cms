@@ -51,7 +51,7 @@
     "conventional-changelog-conventionalcommits": "^9.1.0",
     "decap-cms-core": "^3.10.0",
     "typescript": "^5.7.2",
-    "vite": "^6.4.1"
+    "vite": "^8.0.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
