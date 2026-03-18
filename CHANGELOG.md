@@ -1,3 +1,27 @@
+## [1.2.0](https://github.com/jee-r/astro-decap-cms/compare/v1.1.1...v1.2.0) (2026-03-18)
+
+### Bug Fixes
+
+* **deps:** update astro monorepo ([92899ca](https://github.com/jee-r/astro-decap-cms/commit/92899cad2afc2cf780f4b350114e49f8d25c51ac))
+* **deps:** update dependency netlify-identity-widget to v2 ([b7ec4da](https://github.com/jee-r/astro-decap-cms/commit/b7ec4da07e36fad47e42f342a6f35120219f55d3))
+* **deps:** upgrade vite to v7 for astro 6 compatibility ([a42884b](https://github.com/jee-r/astro-decap-cms/commit/a42884b88fbf076ae13f02905180d7e948fed845))
+
+### Chores
+
+* **demo:** update pnpm lockfile for astro 6 ([98ee019](https://github.com/jee-r/astro-decap-cms/commit/98ee019a3c23b76e70ee1ab7f81187d152a85e66))
+* **deps:** update actions/checkout action to v6 ([d7094b6](https://github.com/jee-r/astro-decap-cms/commit/d7094b6a4490f108d9cb48261702d595bfc01747))
+* **deps:** update actions/setup-node action to v6 ([9337731](https://github.com/jee-r/astro-decap-cms/commit/93377318fec0727b4a73034794b5ac80ac2020cc))
+* **deps:** update astro monorepo ([#17](https://github.com/jee-r/astro-decap-cms/issues/17)) ([5d9c918](https://github.com/jee-r/astro-decap-cms/commit/5d9c9189ca60e386e3629f019afdb46b92b48d29))
+* **deps:** update dependency @astrojs/check to v0.9.8 ([#20](https://github.com/jee-r/astro-decap-cms/issues/20)) ([090b4e6](https://github.com/jee-r/astro-decap-cms/commit/090b4e6fa47245af21104d1128f6bfc2b448b8bb))
+* **deps:** update dependency astro to v5.18.0 ([#10](https://github.com/jee-r/astro-decap-cms/issues/10)) ([cb48705](https://github.com/jee-r/astro-decap-cms/commit/cb487059a15be3c8e932231c3854bb57e1cd2616))
+* **deps:** update dependency conventional-changelog-conventionalcommits to v9.3.0 ([#11](https://github.com/jee-r/astro-decap-cms/issues/11)) ([aa062ee](https://github.com/jee-r/astro-decap-cms/commit/aa062ee5762c1af4057e71eb6135972f9353d2eb))
+* **deps:** update dependency decap-cms-core to v3.10.1 ([#7](https://github.com/jee-r/astro-decap-cms/issues/7)) ([cefd4fe](https://github.com/jee-r/astro-decap-cms/commit/cefd4fe5a669ac070131a0cf622646b7302d4a75))
+* **deps:** update dependency decap-server to v3.5.2 ([#8](https://github.com/jee-r/astro-decap-cms/issues/8)) ([6469e90](https://github.com/jee-r/astro-decap-cms/commit/6469e90a3909b311cb159a4193698816bd63094b))
+* **deps:** update pnpm/action-setup action to v5 ([0181eca](https://github.com/jee-r/astro-decap-cms/commit/0181eca7efbb325a889f6de2acf0970f43aa5264))
+
+### Continuous Integration
+
+* **node:** upgrade to node 22 for astro 6 support ([d2e18cf](https://github.com/jee-r/astro-decap-cms/commit/d2e18cfa7c93d7bd63882f5c48fe218455101177))
 ## [1.1.1](https://github.com/jee-r/astro-decap-cms/compare/v1.1.0...v1.1.1) (2026-01-21)
 
 ### Bug Fixes
