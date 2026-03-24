@@ -10,7 +10,7 @@ importers:
     dependencies:
       decap-server:
         specifier: ^3.5.0
-        version: 3.5.2
+        version: 3.6.0
       netlify-identity-widget:
         specifier: ^2.0.0
         version: 2.0.3
@@ -1452,8 +1452,8 @@ packages:
       prop-types: ^15.7.2
       react: ^19.1.0
 
-  decap-server@3.5.2:
-    resolution: {integrity: sha512-eOecun5rGhTPIwVe+0u8e9MK3Cn4Oiamqzlp572YYk1CfmWgJXP2H89RomXcTKNS6Y9MeRbqBIXgulcChzVing==}
+  decap-server@3.6.0:
+    resolution: {integrity: sha512-DHjHK4zRDWWfG6YTZT79OeclsMVMmOthpsj1Gb5luKKpSsetAWt7olj7XjYHCNPQxbK2cNY8oH6BFLHhRA2xZA==}
     engines: {node: '>=v10.22.1'}
     hasBin: true
 
@@ -2839,8 +2839,8 @@ packages:
     resolution: {integrity: sha512-ZX99e6tRweoUXqR+VBrslhda51Nh5MTQwou5tnUDgbtyM0dBgmhEDtWGP/xbKn6hqfPRHujUNwz5fy/wbbhnpw==}
     engines: {node: '>= 0.4'}
 
-  simple-git@3.32.3:
-    resolution: {integrity: sha512-56a5oxFdWlsGygOXHWrG+xjj5w9ZIt2uQbzqiIGdR/6i5iococ7WQ/bNPzWxCJdEUGUCmyMH0t9zMpRJTaKxmw==}
+  simple-git@3.33.0:
+    resolution: {integrity: sha512-D4V/tGC2sjsoNhoMybKyGoE+v8A60hRawKQ1iFRA1zwuDgGZCBJ4ByOzZ5J8joBbi4Oam0qiPH+GhzmSBwbJng==}
 
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
@@ -4831,7 +4831,7 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  decap-server@3.5.2:
+  decap-server@3.6.0:
     dependencies:
       '@hapi/joi': 17.1.1
       async-mutex: 0.3.2
@@ -4839,7 +4839,7 @@ snapshots:
       dotenv: 10.0.0
       express: 4.22.1
       morgan: 1.10.1
-      simple-git: 3.32.3
+      simple-git: 3.33.0
       what-the-diff: 0.6.0
       winston: 3.19.0
     transitivePeerDependencies:
@@ -6723,7 +6723,7 @@ snapshots:
       side-channel-map: 1.0.1
       side-channel-weakmap: 1.0.2
 
-  simple-git@3.32.3:
+  simple-git@3.33.0:
     dependencies:
       '@kwsites/file-exists': 1.1.1
       '@kwsites/promise-deferred': 1.1.1
