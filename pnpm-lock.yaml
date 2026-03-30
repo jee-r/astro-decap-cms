@@ -20,7 +20,7 @@ importers:
         version: 0.9.8(prettier@3.8.1)(typescript@5.9.3)
       astro:
         specifier: ^6.0.0
-        version: 6.1.1(@types/node@25.0.9)(rollup@4.55.1)(typescript@5.9.3)(yaml@2.8.3)
+        version: 6.1.2(@types/node@25.0.9)(rollup@4.55.1)(typescript@5.9.3)(yaml@2.8.3)
       conventional-changelog-cli:
         specifier: ^5.0.0
         version: 5.0.0(conventional-commits-filter@5.0.0)
@@ -1089,8 +1089,8 @@ packages:
   array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
 
-  astro@6.1.1:
-    resolution: {integrity: sha512-vq8sHpu1JsY1fWAunn+tdKNbVDmLQNiVdyuGsVT2csgITdFGXXVAyEXFWc1DzkMN0ehElPeiHnqItyQOJK+GqA==}
+  astro@6.1.2:
+    resolution: {integrity: sha512-r3iIvmB6JvQxsdJLvapybKKq7Bojd1iQK6CCx5P55eRnXJIyUpHx/1UB/GdMm+em/lwaCUasxHCmIO0lCLV2uA==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4336,7 +4336,7 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro@6.1.1(@types/node@25.0.9)(rollup@4.55.1)(typescript@5.9.3)(yaml@2.8.3):
+  astro@6.1.2(@types/node@25.0.9)(rollup@4.55.1)(typescript@5.9.3)(yaml@2.8.3):
     dependencies:
       '@astrojs/compiler': 3.0.1
       '@astrojs/internal-helpers': 0.8.0
