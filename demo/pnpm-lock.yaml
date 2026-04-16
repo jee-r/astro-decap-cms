@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^5.0.0
-        version: 5.0.3(astro@6.1.6(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3))
+        version: 5.0.3(astro@6.1.7(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3))
       '@astrojs/rss':
         specifier: ^4.0.15
         version: 4.0.18
@@ -19,10 +19,10 @@ importers:
         version: 3.7.2
       '@jee-r/astro-decap-cms':
         specifier: file:..
-        version: file:..(astro@6.1.6(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3))
+        version: file:..(astro@6.1.7(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3))
       astro:
         specifier: ^6.0.0
-        version: 6.1.6(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3)
+        version: 6.1.7(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3)
       sharp:
         specifier: ^0.34.3
         version: 0.34.5
@@ -706,8 +706,8 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro@6.1.6:
-    resolution: {integrity: sha512-pRsz+kYriwCV/AUcY/I9OVKtVHuYFs2DtCszAxprXded/kTE53nMwxfnK0Nf6FPfaX9vcUiLnigcSIhuFoKntA==}
+  astro@6.1.7:
+    resolution: {integrity: sha512-pvZysIUV2C2nRv8N7cXAkCLcfDQz/axAxF09SqiTz1B+xnvbhy6KzL2I6J15ZBXk8k0TfMD75dJ151QyQmAqZA==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1569,8 +1569,8 @@ packages:
     resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
     engines: {node: '>=12'}
 
-  postcss@8.5.9:
-    resolution: {integrity: sha512-7a70Nsot+EMX9fFU3064K/kdHWZqGVY+BADLyXc8Dfv+mTLLVl6JzJpPaCZ2kQL9gIJvKXSLMHhqdRRjwQeFtw==}
+  postcss@8.5.10:
+    resolution: {integrity: sha512-pMMHxBOZKFU6HgAZ4eyGnwXF/EvPGGqUr0MnZ5+99485wwW41kW91A4LOGxSHhgugZmSChL5AlElNdwlNgcnLQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   prismjs@1.30.0:
@@ -2104,12 +2104,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@5.0.3(astro@6.1.6(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3))':
+  '@astrojs/mdx@5.0.3(astro@6.1.7(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3))':
     dependencies:
       '@astrojs/markdown-remark': 7.1.0
       '@mdx-js/mdx': 3.1.1
       acorn: 8.16.0
-      astro: 6.1.6(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3)
+      astro: 6.1.7(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3)
       es-module-lexer: 2.0.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -2389,9 +2389,9 @@ snapshots:
   '@img/sharp-win32-x64@0.34.5':
     optional: true
 
-  '@jee-r/astro-decap-cms@file:..(astro@6.1.6(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3))':
+  '@jee-r/astro-decap-cms@file:..(astro@6.1.7(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3))':
     dependencies:
-      astro: 6.1.6(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3)
+      astro: 6.1.7(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3)
       decap-server: 3.5.0
       netlify-identity-widget: 2.0.3
     transitivePeerDependencies:
@@ -2637,7 +2637,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@6.1.6(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3):
+  astro@6.1.7(@types/node@24.12.0)(rollup@4.60.1)(typescript@5.9.3):
     dependencies:
       '@astrojs/compiler': 3.0.1
       '@astrojs/internal-helpers': 0.8.0
@@ -3971,7 +3971,7 @@ snapshots:
 
   picomatch@4.0.4: {}
 
-  postcss@8.5.9:
+  postcss@8.5.10:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
@@ -4502,7 +4502,7 @@ snapshots:
       esbuild: 0.27.7
       fdir: 6.5.0(picomatch@4.0.4)
       picomatch: 4.0.4
-      postcss: 8.5.9
+      postcss: 8.5.10
       rollup: 4.60.1
       tinyglobby: 0.2.16
     optionalDependencies:
