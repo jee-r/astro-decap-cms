@@ -10,7 +10,7 @@ importers:
     dependencies:
       decap-server:
         specifier: ^3.5.0
-        version: 3.8.0
+        version: 3.9.0
       netlify-identity-widget:
         specifier: ^2.0.0
         version: 2.0.3
@@ -1250,8 +1250,8 @@ packages:
       prop-types: ^15.7.2
       react: ^19.1.0
 
-  decap-server@3.8.0:
-    resolution: {integrity: sha512-luiIjrzC4kSfLgDZUtgDj+kRLuU5fm1D9onDm6Y1Xa5PTr2fqWsG11WmHldZBYB8VGeYcQjenFW4QvrRt/PZCg==}
+  decap-server@3.9.0:
+    resolution: {integrity: sha512-ngOBPVVPP2d7nxuauIZ1W1zE5V+JryQMMIrWVI/qmu7/dErE+8IQKzbgdFEb3Ed+DUHfiZAvAI2cNKd3puDv2g==}
     engines: {node: '>=v10.22.1'}
     hasBin: true
 
@@ -4417,7 +4417,7 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  decap-server@3.8.0:
+  decap-server@3.9.0:
     dependencies:
       '@hapi/joi': 17.1.1
       async-mutex: 0.3.2
