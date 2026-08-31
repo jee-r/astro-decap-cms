@@ -29,7 +29,7 @@ importers:
         version: 9.3.1
       decap-cms-core:
         specifier: ^3.10.0
-        version: 3.17.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@types/react@19.2.17)(react@19.2.3))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.2.1(react@19.2.3))(decap-cms-lib-auth@3.0.6(immutable@3.8.2)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.4.0(immutable@3.8.2)(lodash@4.18.1))(decap-cms-lib-widgets@3.3.0(immutable@3.8.2)(lodash@4.18.1))(decap-cms-ui-default@3.5.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@types/react@19.2.17)(react@19.2.3))(lodash@4.18.1)(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(immutable@3.8.2)(lodash@4.18.1)(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react-immutable-proptypes@2.2.0(immutable@3.8.2))(react@19.2.3)
+        version: 3.18.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@types/react@19.2.17)(react@19.2.3))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.2.1(react@19.2.3))(decap-cms-lib-auth@3.0.6(immutable@3.8.2)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.4.0(immutable@3.8.2)(lodash@4.18.1))(decap-cms-lib-widgets@3.3.0(immutable@3.8.2)(lodash@4.18.1))(decap-cms-ui-default@3.5.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@types/react@19.2.17)(react@19.2.3))(lodash@4.18.1)(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(immutable@3.8.2)(lodash@4.18.1)(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react-immutable-proptypes@2.2.0(immutable@3.8.2))(react@19.2.3)
       typescript:
         specifier: ^5.7.2
         version: 5.9.3
@@ -736,6 +736,9 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
+  '@jsquash/webp@1.5.0':
+    resolution: {integrity: sha512-KggLoj2MnRSfIqTeKe1EmbljTX2vuV7mh79k89PCL1pyqiDULcPM1L47twxXt0hkb68F70bXiL31MxsuoZtKFw==}
+
   '@kwsites/file-exists@1.1.1':
     resolution: {integrity: sha512-m9/5YGR18lIwxSFDwfE3oA7bWuq9kdau6ugN4H2rJeyhFQZcG9AgSHkQtSD15a8WvTgfz9aikZMrKPHvbpqFiw==}
 
@@ -1022,15 +1025,30 @@ packages:
 
   '@volar/language-server@2.4.28':
     resolution: {integrity: sha512-NqcLnE5gERKuS4PUFwlhMxf6vqYo7hXtbMFbViXcbVkbZ905AIVWhnSo0ZNBC2V127H1/2zP7RvVOVnyITFfBw==}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@volar/language-service@2.4.28':
     resolution: {integrity: sha512-Rh/wYCZJrI5vCwMk9xyw/Z+MsWxlJY1rmMZPsxUoJKfzIRjS/NF1NmnuEcrMbEVGja00aVpCsInJfixQTMdvLw==}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@volar/source-map@2.4.28':
     resolution: {integrity: sha512-yX2BDBqJkRXfKw8my8VarTyjv48QwxdJtvRgUpNE5erCsgEUdI2DsLbpa+rOQVAJYshY99szEcRDmyHbF10ggQ==}
 
   '@volar/typescript@2.4.28':
     resolution: {integrity: sha512-Ja6yvWrbis2QtN4ClAKreeUZPVYMARDYZl9LMEv1iQ1QdepB6wn0jTRxA9MftYmYa4DQ4k/DaSZpFPUfxl8giw==}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@vscode/emmet-helper@2.11.0':
     resolution: {integrity: sha512-QLxjQR3imPZPQltfbWRnHU6JecWTF1QSWhx3GAKQpslx7y3Dp6sIIXhKjiUJ/BR9FX8PVthjr9PD6pNwOJfAzw==}
@@ -1196,10 +1214,6 @@ packages:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
 
-  clsx@1.2.1:
-    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
-    engines: {node: '>=6'}
-
   clsx@2.1.1:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
     engines: {node: '>=6'}
@@ -1356,8 +1370,8 @@ packages:
       supports-color:
         optional: true
 
-  decap-cms-core@3.17.0:
-    resolution: {integrity: sha512-8SLDEnbfE9Kr+b4oFmeCMUToqr9Qd0NjvRZldlR6Qi6AblYC1qvDJ3bMpjgWR4rfa269emymZGnMU7K0jo+ruQ==}
+  decap-cms-core@3.18.0:
+    resolution: {integrity: sha512-9YEbop6n9TstYBl1siOLZ/iclUl63JU8hiwMGwzFpdz4IFC2tElv17lmWcw5P2lnMytdgATYW2vGO9/ZAH8sAg==}
     peerDependencies:
       '@emotion/react': ^11.11.1
       '@emotion/styled': ^11.11.0
@@ -2500,11 +2514,11 @@ packages:
   react-style-proptype@3.2.2:
     resolution: {integrity: sha512-ywYLSjNkxKHiZOqNlso9PZByNEY+FTyh3C+7uuziK0xFXu9xzdyfHwg4S9iyiRRoPCR4k2LqaBBsWVmSBwCWYQ==}
 
-  react-toastify@9.1.3:
-    resolution: {integrity: sha512-fPfb8ghtn/XMxw3LkxQBk3IyagNpF/LIKjOBflbexr2AWxAH1MJgvnESwEwBn9liLFXgTKWgBSdZpw9m4OTHTg==}
+  react-toastify@10.0.6:
+    resolution: {integrity: sha512-yYjp+omCDf9lhZcrZHKbSq7YMuK0zcYkDFTzfRFgTXkTFHZ1ToxwAonzA4JI5CxA91JpjFLmwEsZEgfYfOqI1A==}
     peerDependencies:
-      react: '>=16'
-      react-dom: '>=16'
+      react: '>=18'
+      react-dom: '>=18'
 
   react-topbar-progress-indicator@4.1.1:
     resolution: {integrity: sha512-Oy3ENNKfymt16zoz5SYy/WOepMurB0oeZEyvuHm8JZ3jrTCe1oAUD7fG6HhYt5sg8Wcg5gdkzSWItaFF6c6VhA==}
@@ -3165,16 +3179,22 @@ packages:
     resolution: {integrity: sha512-IdD13Z9N2Bu8EM6CM0fDV1E69olEYGHDU25X51YXmq8Y0CmJ2LNj6gOiBJgpS5JGUqFzECVhMNBW7R0sPdRTMQ==}
     peerDependencies:
       '@volar/language-service': ~2.4.0
+      typescript: '*'
     peerDependenciesMeta:
       '@volar/language-service':
+        optional: true
+      typescript:
         optional: true
 
   volar-service-typescript@0.0.70:
     resolution: {integrity: sha512-l46Bx4cokkUedTd74ojO5H/zqHZJ8SUuyZ0IB8JN4jfRqUM3bQFBHoOwlZCyZmOeO0A3RQNkMnFclxO4c++gsg==}
     peerDependencies:
       '@volar/language-service': ~2.4.0
+      typescript: '*'
     peerDependenciesMeta:
       '@volar/language-service':
+        optional: true
+      typescript:
         optional: true
 
   volar-service-yaml@0.0.70:
@@ -3224,6 +3244,9 @@ packages:
 
   warning@4.0.3:
     resolution: {integrity: sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==}
+
+  wasm-feature-detect@1.9.0:
+    resolution: {integrity: sha512-zonE+xlIIYtxPy++L24ow0hAD8CICb4+FgPyROd3buyXIqsJvUEDkBgfCCoXOd1Hu3DUr0GOfnPIdcGV+YpNaA==}
 
   web-namespaces@2.0.1:
     resolution: {integrity: sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==}
@@ -3342,17 +3365,17 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.5
       '@volar/kit': 2.4.28(typescript@5.9.3)
       '@volar/language-core': 2.4.28
-      '@volar/language-server': 2.4.28
-      '@volar/language-service': 2.4.28
+      '@volar/language-server': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
       muggle-string: 0.4.1
       tinyglobby: 0.2.17
-      volar-service-css: 0.0.70(@volar/language-service@2.4.28)
-      volar-service-emmet: 0.0.70(@volar/language-service@2.4.28)
-      volar-service-html: 0.0.70(@volar/language-service@2.4.28)
-      volar-service-prettier: 0.0.70(@volar/language-service@2.4.28)(prettier@3.8.3)
-      volar-service-typescript: 0.0.70(@volar/language-service@2.4.28)
-      volar-service-typescript-twoslash-queries: 0.0.70(@volar/language-service@2.4.28)
-      volar-service-yaml: 0.0.70(@volar/language-service@2.4.28)
+      volar-service-css: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))
+      volar-service-emmet: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))
+      volar-service-html: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))
+      volar-service-prettier: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(prettier@3.8.3)
+      volar-service-typescript: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3)
+      volar-service-typescript-twoslash-queries: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3)
+      volar-service-yaml: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))
       vscode-html-languageservice: 5.6.2
       vscode-uri: 3.1.0
     optionalDependencies:
@@ -3889,6 +3912,10 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  '@jsquash/webp@1.5.0':
+    dependencies:
+      wasm-feature-detect: 1.9.0
+
   '@kwsites/file-exists@1.1.1':
     dependencies:
       debug: 4.4.3
@@ -4112,8 +4139,8 @@ snapshots:
 
   '@volar/kit@2.4.28(typescript@5.9.3)':
     dependencies:
-      '@volar/language-service': 2.4.28
-      '@volar/typescript': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/typescript': 2.4.28(typescript@5.9.3)
       typesafe-path: 0.2.2
       typescript: 5.9.3
       vscode-languageserver-textdocument: 1.0.12
@@ -4123,32 +4150,38 @@ snapshots:
     dependencies:
       '@volar/source-map': 2.4.28
 
-  '@volar/language-server@2.4.28':
+  '@volar/language-server@2.4.28(typescript@5.9.3)':
     dependencies:
       '@volar/language-core': 2.4.28
-      '@volar/language-service': 2.4.28
-      '@volar/typescript': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/typescript': 2.4.28(typescript@5.9.3)
       path-browserify: 1.0.1
       request-light: 0.7.0
       vscode-languageserver: 9.0.1
       vscode-languageserver-protocol: 3.17.5
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
+    optionalDependencies:
+      typescript: 5.9.3
 
-  '@volar/language-service@2.4.28':
+  '@volar/language-service@2.4.28(typescript@5.9.3)':
     dependencies:
       '@volar/language-core': 2.4.28
       vscode-languageserver-protocol: 3.17.5
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
+    optionalDependencies:
+      typescript: 5.9.3
 
   '@volar/source-map@2.4.28': {}
 
-  '@volar/typescript@2.4.28':
+  '@volar/typescript@2.4.28(typescript@5.9.3)':
     dependencies:
       '@volar/language-core': 2.4.28
       path-browserify: 1.0.1
       vscode-uri: 3.1.0
+    optionalDependencies:
+      typescript: 5.9.3
 
   '@vscode/emmet-helper@2.11.0':
     dependencies:
@@ -4404,8 +4437,6 @@ snapshots:
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
 
-  clsx@1.2.1: {}
-
   clsx@2.1.1: {}
 
   color-convert@2.0.1:
@@ -4550,11 +4581,12 @@ snapshots:
     dependencies:
       ms: 2.1.3
 
-  decap-cms-core@3.17.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@types/react@19.2.17)(react@19.2.3))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.2.1(react@19.2.3))(decap-cms-lib-auth@3.0.6(immutable@3.8.2)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.4.0(immutable@3.8.2)(lodash@4.18.1))(decap-cms-lib-widgets@3.3.0(immutable@3.8.2)(lodash@4.18.1))(decap-cms-ui-default@3.5.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@types/react@19.2.17)(react@19.2.3))(lodash@4.18.1)(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(immutable@3.8.2)(lodash@4.18.1)(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react-immutable-proptypes@2.2.0(immutable@3.8.2))(react@19.2.3):
+  decap-cms-core@3.18.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@types/react@19.2.17)(react@19.2.3))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.2.1(react@19.2.3))(decap-cms-lib-auth@3.0.6(immutable@3.8.2)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.4.0(immutable@3.8.2)(lodash@4.18.1))(decap-cms-lib-widgets@3.3.0(immutable@3.8.2)(lodash@4.18.1))(decap-cms-ui-default@3.5.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@types/react@19.2.17)(react@19.2.3))(lodash@4.18.1)(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(immutable@3.8.2)(lodash@4.18.1)(prop-types@15.8.1)(react-dom@19.2.3(react@19.2.3))(react-immutable-proptypes@2.2.0(immutable@3.8.2))(react@19.2.3):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.17)(react@19.2.3)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.3))(@types/react@19.2.17)(react@19.2.3)
       '@iarna/toml': 2.2.5
+      '@jsquash/webp': 1.5.0
       '@vercel/stega': 0.1.2
       ajv: 8.20.0
       ajv-errors: 3.0.0(ajv@8.20.0)
@@ -4592,7 +4624,7 @@ snapshots:
       react-router-dom: 5.3.4(react@19.2.3)
       react-scroll-sync: 0.11.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       react-split-pane: 0.1.92(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react-toastify: 9.1.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react-toastify: 10.0.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       react-topbar-progress-indicator: 4.1.1(react@19.2.3)
       react-virtualized-auto-sizer: 1.0.26(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       react-waypoint: 10.3.0(react@19.2.3)
@@ -6096,9 +6128,9 @@ snapshots:
     dependencies:
       prop-types: 15.8.1
 
-  react-toastify@9.1.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  react-toastify@10.0.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
-      clsx: 1.2.1
+      clsx: 2.1.1
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
 
@@ -6782,45 +6814,46 @@ snapshots:
     optionalDependencies:
       vite: 7.3.6(@types/node@25.0.9)(yaml@2.9.0)
 
-  volar-service-css@0.0.70(@volar/language-service@2.4.28):
+  volar-service-css@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3)):
     dependencies:
       vscode-css-languageservice: 6.3.10
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
 
-  volar-service-emmet@0.0.70(@volar/language-service@2.4.28):
+  volar-service-emmet@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3)):
     dependencies:
       '@emmetio/css-parser': 0.4.1
       '@emmetio/html-matcher': 1.3.0
       '@vscode/emmet-helper': 2.11.0
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
 
-  volar-service-html@0.0.70(@volar/language-service@2.4.28):
+  volar-service-html@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3)):
     dependencies:
       vscode-html-languageservice: 5.6.2
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
 
-  volar-service-prettier@0.0.70(@volar/language-service@2.4.28)(prettier@3.8.3):
+  volar-service-prettier@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(prettier@3.8.3):
     dependencies:
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
       prettier: 3.8.3
 
-  volar-service-typescript-twoslash-queries@0.0.70(@volar/language-service@2.4.28):
+  volar-service-typescript-twoslash-queries@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3):
     dependencies:
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      typescript: 5.9.3
 
-  volar-service-typescript@0.0.70(@volar/language-service@2.4.28):
+  volar-service-typescript@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3):
     dependencies:
       path-browserify: 1.0.1
       semver: 7.8.5
@@ -6829,14 +6862,15 @@ snapshots:
       vscode-nls: 5.2.0
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      typescript: 5.9.3
 
-  volar-service-yaml@0.0.70(@volar/language-service@2.4.28):
+  volar-service-yaml@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3)):
     dependencies:
       vscode-uri: 3.1.0
       yaml-language-server: 1.20.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
 
   vscode-css-languageservice@6.3.10:
     dependencies:
@@ -6884,6 +6918,8 @@ snapshots:
   warning@4.0.3:
     dependencies:
       loose-envify: 1.4.0
+
+  wasm-feature-detect@1.9.0: {}
 
   web-namespaces@2.0.1: {}
 
