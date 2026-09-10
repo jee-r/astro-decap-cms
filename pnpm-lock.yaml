@@ -29,7 +29,7 @@ importers:
         version: 9.3.1
       decap-cms-core:
         specifier: ^3.10.0
-        version: 3.18.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.2.1)(decap-cms-lib-auth@3.0.6(immutable@3.8.2)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.4.0(immutable@3.8.2)(lodash@4.18.1))(decap-cms-lib-widgets@3.3.0(immutable@3.8.2)(lodash@4.18.1))(decap-cms-ui-default@3.5.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(lodash@4.18.1)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
+        version: 3.19.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.4.2(@emotion/react@11.14.0(@types/react@19.2.17)))(decap-cms-lib-auth@3.3.2(immutable@4.3.9)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.8.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1))(decap-cms-lib-widgets@3.4.2(immutable@4.3.9)(lodash@4.18.1))(decap-cms-ui-default@3.9.2(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9))(uuid@8.3.2)
       typescript:
         specifier: ^5.7.2
         version: 5.9.3
@@ -757,6 +757,17 @@ packages:
   '@react-dnd/shallowequal@2.0.0':
     resolution: {integrity: sha512-Pc/AFTdwZwEKJxFJvlxrSmGe/di+aAOBn60sremrpLo6VI/6cmiUYNNwlI5KNYttg7uypzA3ILPMPgxB2GYZEg==}
 
+  '@reduxjs/toolkit@1.9.7':
+    resolution: {integrity: sha512-t7v8ZPxhhKgOKtU+uyJT13lu4vL7az5aFi4IdoDs/eS548edn2M8Ik9h8fxgvMjGoAUVFSt6ZC1P5cWmQ014QQ==}
+    peerDependencies:
+      react: ^16.9.0 || ^17.0.0 || ^18
+      react-redux: ^7.2.1 || ^8.0.2
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-redux:
+        optional: true
+
   '@rollup/pluginutils@5.4.0':
     resolution: {integrity: sha512-MfPp06CjRLfXQ3wY0R8vJDYBy/MvVcc9OulEfR0B8Iv9ko+GCNaRZ+EpJYFl27LhKsZK0o420sYCRHCjfCgeUg==}
     engines: {node: '>=14.0.0'}
@@ -1180,6 +1191,9 @@ packages:
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
 
+  chain-function@1.0.1:
+    resolution: {integrity: sha512-SxltgMwL9uCko5/ZCLiyG2B7R9fY4pDZUw7hJ4MhirdjBLosoDqkWABi3XMucddHdLiFJMb7PD2MZifZriuMTg==}
+
   character-entities-html4@2.1.0:
     resolution: {integrity: sha512-1v7fgQRj6hnSwFpq1Eu0ynr/CDEw0rXo2B61qXrLNdHZmPKgb7fqS1a2JwF0rISo9q77jDI8VMEHoApn8qDoZA==}
 
@@ -1209,6 +1223,10 @@ packages:
   ci-info@4.4.0:
     resolution: {integrity: sha512-77PSwercCZU2Fc4sX94eF8k8Pxte6JAwL4/ICZLFjJLqegs7kCuAsqqj/70NQF6TvDpgFjkubQB2FW2ZZddvQg==}
     engines: {node: '>=8'}
+
+  clean-stack@5.3.0:
+    resolution: {integrity: sha512-9ngPTOhYGQqNVSfeJkYXHmF7AGWp4/nN5D/QqNQs3Dvxd1Kk/WpjHfNujKHYUQ/5CoGyOyFNoWSPk5afzP0QVg==}
+    engines: {node: '>=14.16'}
 
   cliui@9.0.1:
     resolution: {integrity: sha512-k7ndgKhwoQveBL+/1tqGJYNz097I7WOvwbmmU2AR5+magtbjPWQTS1C5vzGkBC8Ym8UWRzfKUzUUqFLypY4Q+w==}
@@ -1310,6 +1328,10 @@ packages:
     resolution: {integrity: sha512-ei8Aos7ja0weRpFzJnEA9UHJ/7XQmqglbRwnf2ATjcB9Wq874VKH9kfjjirM6UhU2/E5fFYadylyhFldcqSidQ==}
     engines: {node: '>=18'}
 
+  copy-text-to-clipboard@3.2.2:
+    resolution: {integrity: sha512-T6SqyLd1iLuqPA90J5N4cTalrtovCySh58iiZDGJ6FGznbclKh4UI+FGacQSgFzwKG77W7XT5gwbVEbd9cIH1A==}
+    engines: {node: '>=12'}
+
   cors@2.8.6:
     resolution: {integrity: sha512-tJtZBBHA6vjIAaF6EnIaq6laBBP9aq/Y3ouVJjEfoHbRBcHBAHYcMh/w8LDrk2PvIMMq8gmopa5D4V8RmbrxGw==}
     engines: {node: '>= 0.10'}
@@ -1317,6 +1339,9 @@ packages:
   cosmiconfig@7.1.0:
     resolution: {integrity: sha512-AdmX6xUzdNASswsFtmwSt7Vj8po9IuqXm0UXz7QKPuEUmPB4XyjGfaAr2PSuELMwkRMVH1EpIkX5bTZGRB3eCA==}
     engines: {node: '>=10'}
+
+  create-react-class@15.7.0:
+    resolution: {integrity: sha512-QZv4sFWG9S5RUvkTYWbflxeZX+JG7Cz0Tn33rQBJ+WFQTqTfUTjMjiv9tnfXazjsO5r0KhPs+AqCjyrQX6h2ng==}
 
   crossws@0.3.5:
     resolution: {integrity: sha512-ojKiDvcmByhwa8YYqbQI/hg7MEU0NC03+pSdEq4ZUnZR9xXpwk7E43SMNGkn+JxJGPFtNvQ48+vV2p+P1ml5PA==}
@@ -1363,55 +1388,59 @@ packages:
       supports-color:
         optional: true
 
-  decap-cms-core@3.18.0:
-    resolution: {integrity: sha512-9YEbop6n9TstYBl1siOLZ/iclUl63JU8hiwMGwzFpdz4IFC2tElv17lmWcw5P2lnMytdgATYW2vGO9/ZAH8sAg==}
+  decap-cms-core@3.19.0:
+    resolution: {integrity: sha512-kAi6mrw4YdR58YdbfzC0iVGNFPNFWk6aLvoEF/8LwshjZqdlmnidCsaYmws3n3bVC6ID4CInFZaSTdK1YVA+NQ==}
     peerDependencies:
       '@emotion/react': ^11.11.1
       '@emotion/styled': ^11.11.0
-      decap-cms-editor-component-image: ^3.0.0
-      decap-cms-lib-auth: ^3.0.0
-      decap-cms-lib-util: ^3.0.0
-      decap-cms-lib-widgets: ^3.0.0
-      decap-cms-ui-default: ^3.0.0
-      immutable: ^3.7.6
+      decap-cms-editor-component-image: 3.4.2
+      decap-cms-lib-auth: 3.3.2
+      decap-cms-lib-util: 3.8.2
+      decap-cms-lib-widgets: 3.4.2
+      decap-cms-ui-default: 3.9.2
+      immutable: ^4.3.9
       lodash: ^4.17.11
       prop-types: ^15.7.2
       react: ^19.1.0
       react-dom: ^19.1.0
       react-immutable-proptypes: ^2.1.0
+      uuid: ^8.3.2
 
-  decap-cms-editor-component-image@3.2.1:
-    resolution: {integrity: sha512-uFnPqLRaqL7FmRupKvMtL9oaE6d6gTuutcIJvuRkNmmToP/PeuFrpEIOBThyPxzjgX4AJm5OkdApiCeC1d0bzQ==}
+  decap-cms-editor-component-image@3.4.2:
+    resolution: {integrity: sha512-G6xUa9BW1eZzvHzznHzz0KqKSaum5wGS7zNnheSfMQRn6LvLkSJuIq5zQ9VRq9f+KgY3uhRQTol3a2qKZJcpeA==}
     peerDependencies:
+      '@emotion/react': ^11.11.1
       react: ^19.1.0
 
-  decap-cms-lib-auth@3.0.6:
-    resolution: {integrity: sha512-AhssFTm/DOZFHpoFv5eoXTF4P2NvFeQDQ0aFsVxOwz3hGnx/uZ/PtAqJkkz1zdRp4bMB8BM6Eh+lkVB2RQhSww==}
+  decap-cms-lib-auth@3.3.2:
+    resolution: {integrity: sha512-iU+UnjnxiXePWKO9BLyB53jalIL3zPHs3daZZt9/DNfRPkKxAn1Glr9zuWgDoDD+zQxy0P1FJZ5GsAcx5Kn5Pg==}
     peerDependencies:
-      immutable: ^3.7.6
+      immutable: ^4.3.9
       lodash: ^4.17.11
       uuid: ^8.3.2
 
-  decap-cms-lib-util@3.4.0:
-    resolution: {integrity: sha512-dzqhNkafRCweJNRDe6A1n6cnkqfyXmmkYJIHjuIqf8IFQ+MVkLY909aBMsSkCn5DQiWKYwnAi83fcQfFa1BG4Q==}
+  decap-cms-lib-util@3.8.2:
+    resolution: {integrity: sha512-XaBq6Y0spFW461QcQhcWduBSDy13v+5J88vRapsyEico44NniDy1cUGhl89tnW9DH8VkzhA++YoLD0sTG2uLLQ==}
     peerDependencies:
-      immutable: ^3.7.6
+      common-tags: 1.8.2
+      immutable: ^4.3.9
       lodash: ^4.17.11
 
-  decap-cms-lib-widgets@3.3.0:
-    resolution: {integrity: sha512-ua4JCcbF7HY+zJS2kWewq2/nnQnermTdehdFOYTDZEqcEtwN/6ONa36POeS5Bnu7rBw1M3K+YtY8v3BlXt5qWw==}
+  decap-cms-lib-widgets@3.4.2:
+    resolution: {integrity: sha512-30ekAm+x2oo4hJy8h/weFlAZjXNCc2pMOfXD3TymsfhaMGxeLLKuriihBGj/waYvq+uPbn4IokplsbKxLeIBaw==}
     peerDependencies:
-      immutable: ^3.7.6
+      immutable: ^4.3.9
       lodash: ^4.17.11
 
-  decap-cms-ui-default@3.5.0:
-    resolution: {integrity: sha512-8tvm3+HAaa0BhhA2yQq5iyS7A4KLI+hB5jm8A65/TbObkhWPxG02NLGcnyK1PXwt/A4ZATQrs0yKwbXiE271qg==}
+  decap-cms-ui-default@3.9.2:
+    resolution: {integrity: sha512-HnsuB6lxknKoZAktv5AFOpos13n3iQj37m72aWmiw3Jc7jra+tuSZU0+bOsiRNmhizxfLajNkrmHm2kn153igA==}
     peerDependencies:
       '@emotion/react': ^11.11.1
       '@emotion/styled': ^11.11.0
       lodash: ^4.17.11
       prop-types: ^15.7.2
       react: ^19.1.0
+      react-immutable-proptypes: ^2.1.0
 
   decap-server@3.11.2:
     resolution: {integrity: sha512-wlrSBLIQrxqdPdSf7RP9brsvLnW9Wtu98z3AxuHPHATJE2dYluMjMECsiCrXoYb0u4iCLbAu4Ni2Vo1f2PkHaA==}
@@ -1470,6 +1499,9 @@ packages:
 
   dnd-core@14.0.1:
     resolution: {integrity: sha512-+PVS2VPTgKFPYWo3vAFEA8WPbTf7/xo43TifH9G8S1KqnrQu0o77A3unrF5yOugy4mIz7K5wAVFHUcha7wsz6A==}
+
+  dom-helpers@3.4.0:
+    resolution: {integrity: sha512-LnuPJ+dwqKDIyotW1VzmOZ5TONUN7CwkCR5hrgawTUbkBGYdeoNLZo6nNfGkCrjtE1nXXaj7iMMpDa8/d9WoIA==}
 
   dom-helpers@5.2.1:
     resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
@@ -1700,6 +1732,9 @@ packages:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
 
+  gotrue-js@0.9.29:
+    resolution: {integrity: sha512-NSFwJlFfWxHd1zHDitysbh+amFPHBAyQG1YmecZJTaSe8TlC7Wja1ewdUBikfJBblN3SqghS6aViMd+Q/pPzGQ==}
+
   gray-matter@4.0.3:
     resolution: {integrity: sha512-5v6yZd4JK3eMI3FqqCouswVqwugaA9r4dNZB1wwcmrD02QkV5H0y7XBQW8QwQqEaZY1pM9aqORSORhJRdNK44Q==}
     engines: {node: '>=6.0'}
@@ -1789,9 +1824,8 @@ packages:
   immer@9.0.21:
     resolution: {integrity: sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==}
 
-  immutable@3.8.2:
-    resolution: {integrity: sha512-15gZoQ38eYjEjxkorfbcgBKBL6R7T459OuK+CpcWt7O3KF4uPCx2tD0uFETlUDIyo+1789crbMhTvQBSR5yBMg==}
-    engines: {node: '>=0.10.0'}
+  immutable@4.3.9:
+    resolution: {integrity: sha512-ObHy4YN7ycwZOUCLI1/6svfyAFu7vL8RhAvVu/bh/RZW9EPlOyDaQ9jDQWCtdqzaXUjgXZCW1migtHE7YI7UGQ==}
 
   import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
@@ -1878,6 +1912,9 @@ packages:
   isarray@0.0.1:
     resolution: {integrity: sha512-D2S+3GLxWH+uhrNEcoh/fnmYeP8E8/zHl644d/jdA0g2uyXvy3sb0qxotE+ne0LtccHknQzWwZEzhak7oJ0COQ==}
 
+  js-base64@3.9.3:
+    resolution: {integrity: sha512-uwYQp+VJ38FVvtim6qNbit6e9uT6dwWQ4Y1+H9TxhW5hcHjpHwoxlR0nMpqUmIFOmu4VqMxwdJA88gIVuZJQ/g==}
+
   js-sha256@0.9.0:
     resolution: {integrity: sha512-sga3MHh9sgQN2+pJ9VYZ+1LPwXOxuBJBA5nrR5/ofPfuiJBE2hnjsaN8se8JznOmGLN2p49Pe5U/ttafcs/apA==}
 
@@ -1908,6 +1945,9 @@ packages:
 
   jsonc-parser@3.3.1:
     resolution: {integrity: sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==}
+
+  jwt-decode@3.1.2:
+    resolution: {integrity: sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==}
 
   kind-of@6.0.3:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
@@ -2067,6 +2107,9 @@ packages:
   methods@1.1.2:
     resolution: {integrity: sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==}
     engines: {node: '>= 0.6'}
+
+  micro-api-client@3.3.0:
+    resolution: {integrity: sha512-y0y6CUB9RLVsy3kfgayU28746QrNMpSm9O/AYGNsBgOkJr/X/Jk0VLGoO8Ude7Bpa8adywzF+MzXNZRFRsNPhg==}
 
   micromark-core-commonmark@2.0.3:
     resolution: {integrity: sha512-RDBrHEMSxVFLg6xvnXmb1Ayr2WzLAWjeSATAoxwKYJV94TeNavgoIdA0a9ytzDSVzBy2YKFK+emCPOEibLeCrg==}
@@ -2385,6 +2428,9 @@ packages:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
     engines: {node: '>= 0.10'}
 
+  punycode@1.4.1:
+    resolution: {integrity: sha512-jmYNElW7yvO7TV33CjSmvSiE2yco3bV2czu/OzDKdMNVZQWfxCblURLhf+47syQRBntjfLdd/H0egrzIG+oaFQ==}
+
   qs@6.15.3:
     resolution: {integrity: sha512-O9gl3zCl5h5blw1KGUzQKhA5oUXSl8rwUIM5o0S3nCXMliSvy5Dzx7/DJcI+SwgICv+IneSZwhBh1oSyEHA71A==}
     engines: {node: '>=0.6'}
@@ -2465,6 +2511,12 @@ packages:
       node-polyglot: ^2.0.0
       react: '>=16.8.0'
 
+  react-redux@4.4.10:
+    resolution: {integrity: sha512-tjL0Bmpkj75Td0k+lXlF8Fc8a9GuXFv/3ahUOCXExWs/jhsKiQeTffdH0j5byejCGCRL4tvGFYlrwBF1X/Aujg==}
+    peerDependencies:
+      react: ^0.14.0 || ^15.0.0-0 || ^15.4.0-0 || ^16.0.0-0
+      redux: ^2.0.0 || ^3.0.0
+
   react-redux@7.2.9:
     resolution: {integrity: sha512-Gx4L3uM182jEEayZfRbI/G11ZpYdNAnBs70lFVMNdHJI76XYtR+7m0MN+eAs7UHBPhWXcnFPaS+9owSCJQHNpQ==}
     peerDependencies:
@@ -2513,6 +2565,12 @@ packages:
     peerDependencies:
       react: '>=16.8.0'
 
+  react-transition-group@1.2.1:
+    resolution: {integrity: sha512-CWaL3laCmgAFdxdKbhhps+c0HRGF4c+hdM4H23+FI1QBNUyx/AMeIJGWorehPNSaKnQNOAxL7PQmqMu78CDj3Q==}
+    peerDependencies:
+      react: ^15.0.0 || ^16.0.0
+      react-dom: ^15.0.0 || ^16.0.0
+
   react-transition-group@4.4.5:
     resolution: {integrity: sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==}
     peerDependencies:
@@ -2554,6 +2612,12 @@ packages:
     deprecated: Package moved to @redux-devtools/extension.
     peerDependencies:
       redux: ^3.1.0 || ^4.0.0
+
+  redux-notifications@4.0.1:
+    resolution: {integrity: sha512-mRVaEcsvu5B4P8x8kW0uY83EQqaWL/0+/NvL4bdbHGJVg+Rwx54MgBU1s+tB6RAA2E6NX/DmQrO4EbFDcQSi+w==}
+    peerDependencies:
+      react: ^0.14.0 || ^15.0.0-0 || ^15.4.0-0 || ^16.0.0-0
+      react-dom: ^0.14.0 || ^15.0.0-0 || ^15.4.0-0 || ^16.0.0-0
 
   redux-thunk@2.4.2:
     resolution: {integrity: sha512-+P3TjtnP0k/FEjcBL5FZpoovtvrTNT/UXd4/sluaSyrURlSlhLSzEdfsTBW7WsKB6yPvgd7q/iZPICFjW4o57Q==}
@@ -2622,6 +2686,9 @@ packages:
   require-from-string@2.0.2:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
     engines: {node: '>=0.10.0'}
+
+  reselect@4.1.8:
+    resolution: {integrity: sha512-ab9EmR80F/zQTMNeneUr4cv+jSwPJgIlvEmVwLerwrWVbpLlBuls9XHzIeTFy4cegU2NHBp3va0LKOzU5qFEYQ==}
 
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -3033,6 +3100,10 @@ packages:
   url-join@4.0.1:
     resolution: {integrity: sha512-jk1+QP6ZJqyOiuEI9AEWQfju/nB2Pw466kbA0LEZljHwKeMgd9WrAEgEGxjPDD2+TNbbb37rTyhEfrCXfuKXnA==}
 
+  url@0.11.4:
+    resolution: {integrity: sha512-oCwdVC7mTuWiPyjLUz/COz5TLk6wgp0RCsN+wHZ2Ekneac9w8uuV0njcbbie2ME+Vs+d6duwmYuR3HgQXs1fOg==}
+    engines: {node: '>= 0.4'}
+
   utf8-byte-length@1.0.5:
     resolution: {integrity: sha512-Xn0w3MtiQ6zoz2vFyUVruaCL53O/DwUvkEeOvj+uulMm0BkUGYWmBYVyElqZaSLhY6ZD0ulfU3aBra2aVT4xfA==}
 
@@ -3222,6 +3293,9 @@ packages:
   walk-up-path@4.0.0:
     resolution: {integrity: sha512-3hu+tD8YzSLGuFYtPRb48vdhKMi0KQV5sn+uWr8+7dMEq/2G/dtLrdDinkLjqq5TIbIBjYJ4Ax/n3YiaW7QM8A==}
     engines: {node: 20 || >=22}
+
+  warning@3.0.0:
+    resolution: {integrity: sha512-jMBt6pUrKn5I+OGgtQ4YZLdhIeJmObddh6CsibPxyQ5yPZm1XExSyzC1LCNX7BzhxWgiHmizBWJTHJIjMjTQYQ==}
 
   warning@4.0.3:
     resolution: {integrity: sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==}
@@ -3905,6 +3979,15 @@ snapshots:
 
   '@react-dnd/shallowequal@2.0.0': {}
 
+  '@reduxjs/toolkit@1.9.7(react-redux@7.2.9)':
+    dependencies:
+      immer: 9.0.21
+      redux: 4.2.1
+      redux-thunk: 2.4.2(redux@4.2.1)
+      reselect: 4.1.8
+    optionalDependencies:
+      react-redux: 7.2.9
+
   '@rollup/pluginutils@5.4.0(rollup@4.62.2)':
     dependencies:
       '@types/estree': 1.0.9
@@ -4380,6 +4463,8 @@ snapshots:
 
   ccount@2.0.1: {}
 
+  chain-function@1.0.1: {}
+
   character-entities-html4@2.1.0: {}
 
   character-entities-legacy@1.1.4: {}
@@ -4401,6 +4486,10 @@ snapshots:
       readdirp: 5.0.0
 
   ci-info@4.4.0: {}
+
+  clean-stack@5.3.0:
+    dependencies:
+      escape-string-regexp: 5.0.0
 
   cliui@9.0.1:
     dependencies:
@@ -4493,6 +4582,8 @@ snapshots:
 
   cookie@1.1.1: {}
 
+  copy-text-to-clipboard@3.2.2: {}
+
   cors@2.8.6:
     dependencies:
       object-assign: 4.1.1
@@ -4505,6 +4596,11 @@ snapshots:
       parse-json: 5.2.0
       path-type: 4.0.0
       yaml: 1.10.3
+
+  create-react-class@15.7.0:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
 
   crossws@0.3.5:
     dependencies:
@@ -4546,31 +4642,37 @@ snapshots:
     dependencies:
       ms: 2.1.3
 
-  decap-cms-core@3.18.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.2.1)(decap-cms-lib-auth@3.0.6(immutable@3.8.2)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.4.0(immutable@3.8.2)(lodash@4.18.1))(decap-cms-lib-widgets@3.3.0(immutable@3.8.2)(lodash@4.18.1))(decap-cms-ui-default@3.5.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(lodash@4.18.1)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
+  decap-cms-core@3.19.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.4.2(@emotion/react@11.14.0(@types/react@19.2.17)))(decap-cms-lib-auth@3.3.2(immutable@4.3.9)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.8.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1))(decap-cms-lib-widgets@3.4.2(immutable@4.3.9)(lodash@4.18.1))(decap-cms-ui-default@3.9.2(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9))(uuid@8.3.2):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.17)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17)
       '@iarna/toml': 2.2.5
       '@jsquash/webp': 1.5.0
+      '@reduxjs/toolkit': 1.9.7(react-redux@7.2.9)
       '@vercel/stega': 0.1.2
       ajv: 8.20.0
       ajv-errors: 3.0.0(ajv@8.20.0)
       ajv-keywords: 5.1.0(ajv@8.20.0)
       buffer: 6.0.3
+      clean-stack: 5.3.0
       common-tags: 1.8.2
+      copy-text-to-clipboard: 3.2.2
       dayjs: 1.11.21
-      decap-cms-editor-component-image: 3.2.1
-      decap-cms-lib-auth: 3.0.6(immutable@3.8.2)(lodash@4.18.1)(uuid@8.3.2)
-      decap-cms-lib-util: 3.4.0(immutable@3.8.2)(lodash@4.18.1)
-      decap-cms-lib-widgets: 3.3.0(immutable@3.8.2)(lodash@4.18.1)
-      decap-cms-ui-default: 3.5.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(lodash@4.18.1)(prop-types@15.8.1)
+      decap-cms-editor-component-image: 3.4.2(@emotion/react@11.14.0(@types/react@19.2.17))
+      decap-cms-lib-auth: 3.3.2(immutable@4.3.9)(lodash@4.18.1)(uuid@8.3.2)
+      decap-cms-lib-util: 3.8.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1)
+      decap-cms-lib-widgets: 3.4.2(immutable@4.3.9)(lodash@4.18.1)
+      decap-cms-ui-default: 3.9.2(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9))
       deepmerge: 4.3.1
       diacritics: 1.3.0
       fuzzy: 0.1.3
+      gotrue-js: 0.9.29
       gray-matter: 4.0.3
       history: 4.10.1
       immer: 9.0.21
-      immutable: 3.8.2
+      immutable: 4.3.9
+      js-base64: 3.9.3
+      jwt-decode: 3.1.2
       lodash: 4.18.1
       node-polyglot: 2.6.0
       path-browserify: 1.0.1
@@ -4578,7 +4680,7 @@ snapshots:
       react-dnd: 14.0.5(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)
       react-dnd-html5-backend: 14.1.0
       react-frame-component: 5.3.2(prop-types@15.8.1)
-      react-immutable-proptypes: 2.2.0(immutable@3.8.2)
+      react-immutable-proptypes: 2.2.0(immutable@4.3.9)
       react-is: 16.13.1
       react-markdown: 6.0.3(@types/react@19.2.17)
       react-modal: 3.16.3
@@ -4594,11 +4696,15 @@ snapshots:
       react-window: 1.8.11
       redux: 4.2.1
       redux-devtools-extension: 2.13.9(redux@4.2.1)
+      redux-notifications: 4.0.1(redux@4.2.1)
       redux-thunk: 2.4.2(redux@4.2.1)
       remark-gfm: 1.0.0
       sanitize-filename: 1.6.4
+      semaphore: 1.1.0
       tomlify-j0.4: 3.0.0
+      url: 0.11.4
       url-join: 4.0.1
+      uuid: 8.3.2
       what-input: 5.2.12
       yaml: 1.10.3
     transitivePeerDependencies:
@@ -4608,36 +4714,40 @@ snapshots:
       - react-native
       - supports-color
 
-  decap-cms-editor-component-image@3.2.1: {}
-
-  decap-cms-lib-auth@3.0.6(immutable@3.8.2)(lodash@4.18.1)(uuid@8.3.2):
+  decap-cms-editor-component-image@3.4.2(@emotion/react@11.14.0(@types/react@19.2.17)):
     dependencies:
-      immutable: 3.8.2
+      '@emotion/react': 11.14.0(@types/react@19.2.17)
+
+  decap-cms-lib-auth@3.3.2(immutable@4.3.9)(lodash@4.18.1)(uuid@8.3.2):
+    dependencies:
+      immutable: 4.3.9
       lodash: 4.18.1
       uuid: 8.3.2
 
-  decap-cms-lib-util@3.4.0(immutable@3.8.2)(lodash@4.18.1):
+  decap-cms-lib-util@3.8.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1):
     dependencies:
-      immutable: 3.8.2
+      common-tags: 1.8.2
+      immutable: 4.3.9
       js-sha256: 0.9.0
       localforage: 1.10.0
       lodash: 4.18.1
       semaphore: 1.1.0
 
-  decap-cms-lib-widgets@3.3.0(immutable@3.8.2)(lodash@4.18.1):
+  decap-cms-lib-widgets@3.4.2(immutable@4.3.9)(lodash@4.18.1):
     dependencies:
       dayjs: 1.11.21
-      immutable: 3.8.2
+      immutable: 4.3.9
       lodash: 4.18.1
       path-browserify: 1.0.1
 
-  decap-cms-ui-default@3.5.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(lodash@4.18.1)(prop-types@15.8.1):
+  decap-cms-ui-default@3.9.2(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.17)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17)
       lodash: 4.18.1
       prop-types: 15.8.1
       react-aria-menubutton: 7.0.3
+      react-immutable-proptypes: 2.2.0(immutable@4.3.9)
       react-transition-group: 4.4.5
     transitivePeerDependencies:
       - react-dom
@@ -4702,6 +4812,10 @@ snapshots:
       '@react-dnd/asap': 4.0.1
       '@react-dnd/invariant': 2.0.0
       redux: 4.2.1
+
+  dom-helpers@3.4.0:
+    dependencies:
+      '@babel/runtime': 7.29.7
 
   dom-helpers@5.2.1:
     dependencies:
@@ -4982,6 +5096,10 @@ snapshots:
 
   gopd@1.2.0: {}
 
+  gotrue-js@0.9.29:
+    dependencies:
+      micro-api-client: 3.3.0
+
   gray-matter@4.0.3:
     dependencies:
       js-yaml: 3.15.0
@@ -5148,7 +5266,7 @@ snapshots:
 
   immer@9.0.21: {}
 
-  immutable@3.8.2: {}
+  immutable@4.3.9: {}
 
   import-fresh@3.3.1:
     dependencies:
@@ -5210,6 +5328,8 @@ snapshots:
 
   isarray@0.0.1: {}
 
+  js-base64@3.9.3: {}
+
   js-sha256@0.9.0: {}
 
   js-tokens@4.0.0: {}
@@ -5232,6 +5352,8 @@ snapshots:
   jsonc-parser@2.3.1: {}
 
   jsonc-parser@3.3.1: {}
+
+  jwt-decode@3.1.2: {}
 
   kind-of@6.0.3: {}
 
@@ -5498,6 +5620,8 @@ snapshots:
   merge-descriptors@1.0.3: {}
 
   methods@1.1.2: {}
+
+  micro-api-client@3.3.0: {}
 
   micromark-core-commonmark@2.0.3:
     dependencies:
@@ -5934,6 +6058,8 @@ snapshots:
       forwarded: 0.2.0
       ipaddr.js: 1.9.1
 
+  punycode@1.4.1: {}
+
   qs@6.15.3:
     dependencies:
       es-define-property: 1.0.1
@@ -5976,9 +6102,9 @@ snapshots:
     dependencies:
       prop-types: 15.8.1
 
-  react-immutable-proptypes@2.2.0(immutable@3.8.2):
+  react-immutable-proptypes@2.2.0(immutable@4.3.9):
     dependencies:
-      immutable: 3.8.2
+      immutable: 4.3.9
       invariant: 2.2.4
 
   react-is@16.13.1: {}
@@ -6020,6 +6146,16 @@ snapshots:
       hoist-non-react-statics: 3.3.2
       node-polyglot: 2.6.0
       prop-types: 15.8.1
+
+  react-redux@4.4.10(redux@4.2.1):
+    dependencies:
+      create-react-class: 15.7.0
+      hoist-non-react-statics: 3.3.2
+      invariant: 2.2.4
+      lodash: 4.18.1
+      loose-envify: 1.4.0
+      prop-types: 15.8.1
+      redux: 4.2.1
 
   react-redux@7.2.9:
     dependencies:
@@ -6074,6 +6210,14 @@ snapshots:
     dependencies:
       topbar: 0.1.4
 
+  react-transition-group@1.2.1:
+    dependencies:
+      chain-function: 1.0.1
+      dom-helpers: 3.4.0
+      loose-envify: 1.4.0
+      prop-types: 15.8.1
+      warning: 3.0.0
+
   react-transition-group@4.4.5:
     dependencies:
       '@babel/runtime': 7.29.7
@@ -6108,6 +6252,15 @@ snapshots:
   redux-devtools-extension@2.13.9(redux@4.2.1):
     dependencies:
       redux: 4.2.1
+
+  redux-notifications@4.0.1(redux@4.2.1):
+    dependencies:
+      object-assign: 4.1.1
+      prop-types: 15.8.1
+      react-redux: 4.4.10(redux@4.2.1)
+      react-transition-group: 1.2.1
+    transitivePeerDependencies:
+      - redux
 
   redux-thunk@2.4.2(redux@4.2.1):
     dependencies:
@@ -6217,6 +6370,8 @@ snapshots:
   request-light@0.7.0: {}
 
   require-from-string@2.0.2: {}
+
+  reselect@4.1.8: {}
 
   resolve-from@4.0.0: {}
 
@@ -6679,6 +6834,11 @@ snapshots:
 
   url-join@4.0.1: {}
 
+  url@0.11.4:
+    dependencies:
+      punycode: 1.4.1
+      qs: 6.15.3
+
   utf8-byte-length@1.0.5: {}
 
   util-deprecate@1.0.2: {}
@@ -6840,6 +7000,10 @@ snapshots:
   vscode-uri@3.1.0: {}
 
   walk-up-path@4.0.0: {}
+
+  warning@3.0.0:
+    dependencies:
+      loose-envify: 1.4.0
 
   warning@4.0.3:
     dependencies:
