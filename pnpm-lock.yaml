@@ -29,7 +29,7 @@ importers:
         version: 9.3.1
       decap-cms-core:
         specifier: ^3.10.0
-        version: 3.19.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.4.2(@emotion/react@11.14.0(@types/react@19.2.17)))(decap-cms-lib-auth@3.3.2(immutable@4.3.9)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.8.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1))(decap-cms-lib-widgets@3.4.2(immutable@4.3.9)(lodash@4.18.1))(decap-cms-ui-default@3.9.2(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9))(uuid@8.3.2)
+        version: 3.19.1(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.4.2(@emotion/react@11.14.0(@types/react@19.2.17)))(decap-cms-lib-auth@3.3.2(immutable@4.3.9)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.8.3(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1))(decap-cms-lib-widgets@3.4.2(immutable@4.3.9)(lodash@4.18.1))(decap-cms-ui-default@3.9.2(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9))(uuid@8.3.2)
       typescript:
         specifier: ^5.7.2
         version: 5.9.3
@@ -1388,14 +1388,14 @@ packages:
       supports-color:
         optional: true
 
-  decap-cms-core@3.19.0:
-    resolution: {integrity: sha512-kAi6mrw4YdR58YdbfzC0iVGNFPNFWk6aLvoEF/8LwshjZqdlmnidCsaYmws3n3bVC6ID4CInFZaSTdK1YVA+NQ==}
+  decap-cms-core@3.19.1:
+    resolution: {integrity: sha512-j+Wnmpc+LM2kXDdPCwIcH+G67HROEJepfHUi1yynjzckdTHl8x2t9096O+TZlyniWiBYc3qm00+dsXTD4hEEOQ==}
     peerDependencies:
       '@emotion/react': ^11.11.1
       '@emotion/styled': ^11.11.0
       decap-cms-editor-component-image: 3.4.2
       decap-cms-lib-auth: 3.3.2
-      decap-cms-lib-util: 3.8.2
+      decap-cms-lib-util: 3.8.3
       decap-cms-lib-widgets: 3.4.2
       decap-cms-ui-default: 3.9.2
       immutable: ^4.3.9
@@ -1419,8 +1419,8 @@ packages:
       lodash: ^4.17.11
       uuid: ^8.3.2
 
-  decap-cms-lib-util@3.8.2:
-    resolution: {integrity: sha512-XaBq6Y0spFW461QcQhcWduBSDy13v+5J88vRapsyEico44NniDy1cUGhl89tnW9DH8VkzhA++YoLD0sTG2uLLQ==}
+  decap-cms-lib-util@3.8.3:
+    resolution: {integrity: sha512-UVRtoXgkCneMq31ROI744iU9tt/a3LW0fGMSYFJBc/yAZP9Utl2CWnIWKAr3eX3QwOEHH7lGw1hvcTxOfSgFmw==}
     peerDependencies:
       common-tags: 1.8.2
       immutable: ^4.3.9
@@ -4642,7 +4642,7 @@ snapshots:
     dependencies:
       ms: 2.1.3
 
-  decap-cms-core@3.19.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.4.2(@emotion/react@11.14.0(@types/react@19.2.17)))(decap-cms-lib-auth@3.3.2(immutable@4.3.9)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.8.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1))(decap-cms-lib-widgets@3.4.2(immutable@4.3.9)(lodash@4.18.1))(decap-cms-ui-default@3.9.2(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9))(uuid@8.3.2):
+  decap-cms-core@3.19.1(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.4.2(@emotion/react@11.14.0(@types/react@19.2.17)))(decap-cms-lib-auth@3.3.2(immutable@4.3.9)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.8.3(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1))(decap-cms-lib-widgets@3.4.2(immutable@4.3.9)(lodash@4.18.1))(decap-cms-ui-default@3.9.2(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9))(uuid@8.3.2):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.17)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17)
@@ -4660,7 +4660,7 @@ snapshots:
       dayjs: 1.11.21
       decap-cms-editor-component-image: 3.4.2(@emotion/react@11.14.0(@types/react@19.2.17))
       decap-cms-lib-auth: 3.3.2(immutable@4.3.9)(lodash@4.18.1)(uuid@8.3.2)
-      decap-cms-lib-util: 3.8.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1)
+      decap-cms-lib-util: 3.8.3(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1)
       decap-cms-lib-widgets: 3.4.2(immutable@4.3.9)(lodash@4.18.1)
       decap-cms-ui-default: 3.9.2(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9))
       deepmerge: 4.3.1
@@ -4724,7 +4724,7 @@ snapshots:
       lodash: 4.18.1
       uuid: 8.3.2
 
-  decap-cms-lib-util@3.8.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1):
+  decap-cms-lib-util@3.8.3(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1):
     dependencies:
       common-tags: 1.8.2
       immutable: 4.3.9
