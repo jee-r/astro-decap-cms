@@ -35,7 +35,7 @@ importers:
         version: 5.9.3
       vite:
         specifier: ^7.0.0
-        version: 7.3.6(@types/node@25.0.9)(yaml@2.9.0)
+        version: 7.3.7(@types/node@25.0.9)(yaml@2.9.0)
 
 packages:
 
@@ -3144,8 +3144,8 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite@7.3.6:
-    resolution: {integrity: sha512-4XP60spRGjSZFf1qYH+dJIkK2znL3zQfl9KkOV9MkkRR/3Dls0dxaBsQPTloEc5BLXWPL9vsOxopxyKoMmDueg==}
+  vite@7.3.7:
+    resolution: {integrity: sha512-AHEzTORMbi7/7aXp7w7KZ5+DCUdSeLsJz0grY8xHpc9DHdYb0vQu6DqJfm2tOw3gDExNgPgnJTXxM6syYFHaCA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -4349,8 +4349,8 @@ snapshots:
       unist-util-visit: 5.1.0
       unstorage: 1.17.5
       vfile: 6.0.3
-      vite: 7.3.6(@types/node@25.0.9)(yaml@2.9.0)
-      vitefu: 1.1.3(vite@7.3.6(@types/node@25.0.9)(yaml@2.9.0))
+      vite: 7.3.7(@types/node@25.0.9)(yaml@2.9.0)
+      vitefu: 1.1.3(vite@7.3.7(@types/node@25.0.9)(yaml@2.9.0))
       xxhash-wasm: 1.1.0
       yargs-parser: 22.0.0
       zod: 4.4.3
@@ -6883,7 +6883,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite@7.3.6(@types/node@25.0.9)(yaml@2.9.0):
+  vite@7.3.7(@types/node@25.0.9)(yaml@2.9.0):
     dependencies:
       esbuild: 0.28.1
       fdir: 6.5.0(picomatch@4.0.4)
@@ -6896,9 +6896,9 @@ snapshots:
       fsevents: 2.3.3
       yaml: 2.9.0
 
-  vitefu@1.1.3(vite@7.3.6(@types/node@25.0.9)(yaml@2.9.0)):
+  vitefu@1.1.3(vite@7.3.7(@types/node@25.0.9)(yaml@2.9.0)):
     optionalDependencies:
-      vite: 7.3.6(@types/node@25.0.9)(yaml@2.9.0)
+      vite: 7.3.7(@types/node@25.0.9)(yaml@2.9.0)
 
   volar-service-css@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3)):
     dependencies:
