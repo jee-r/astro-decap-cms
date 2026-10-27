@@ -10,7 +10,7 @@ importers:
     dependencies:
       decap-server:
         specifier: ^3.5.0
-        version: 3.11.5
+        version: 3.11.6
       netlify-identity-widget:
         specifier: ^2.0.0
         version: 2.0.3
@@ -157,8 +157,8 @@ packages:
   '@dabh/diagnostics@2.0.8':
     resolution: {integrity: sha512-R4MSXTVnuMzGD7bzHdW2ZhhdPC/igELENcq5IjEverBvq5hn1SXCWcsi6eSsdWP0/Ur+SItRRjAktmdoX/8R/Q==}
 
-  '@decap/cli@0.1.2':
-    resolution: {integrity: sha512-FlMoJG9ACwG1jCE/ciTBn1z7kDNGbg0gWeUtxtglZsL0jd0LKKYNl7tIB2sdpclU+cKFWXxWiFtuKswWji/1Cg==}
+  '@decap/cli@0.1.3':
+    resolution: {integrity: sha512-TfCAZlpmFN3w3uMSzu9fZhIGr2oaARKSyOcqvoKJywL0BEQG/6eQcjrpa3n3F+Tym038BB0v7pPPDkDvPdgdVQ==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1128,6 +1128,11 @@ packages:
 
   ajv-formats@3.0.1:
     resolution: {integrity: sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==}
+    peerDependencies:
+      ajv: ^8.0.0
+    peerDependenciesMeta:
+      ajv:
+        optional: true
 
   ajv-i18n@4.2.0:
     resolution: {integrity: sha512-v/ei2UkCEeuKNXh8RToiFsUclmU+G57LO1Oo22OagNMENIw+Yb8eMwvHu7Vn9fmkjJyv6XclhJ8TbuigSglPkg==}
@@ -1499,8 +1504,8 @@ packages:
       react: ^19.1.0
       react-immutable-proptypes: ^2.1.0
 
-  decap-server@3.11.5:
-    resolution: {integrity: sha512-CBTBK7LZPD6IVKCK003o59L+zDTVFt+WxEO4AGO05bknapj8CKBYf6olW+zitHbl3aW7RqUS24UBoEUzRHf/RA==}
+  decap-server@3.11.6:
+    resolution: {integrity: sha512-2eWHBiHl+2jyqOt0Uik5cV/CK2cDVg8yaHMmyi5tXF9ZpDU5HyhUR9VHtRncRSWMpevUmtxLbFk/CoetqeaB0w==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -2561,10 +2566,6 @@ packages:
 
   property-information@7.2.0:
     resolution: {integrity: sha512-IAtzIB6sUiWaJYrX9smp3V46pBGbBeLFRGdh25kg1334VcBlD8HzhPeNIWQH9zhGmo2itIe25EHt9dQP7G5hmg==}
-
-  proxy-addr@2.0.7:
-    resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
-    engines: {node: '>= 0.10'}
 
   proxy-addr@2.0.8:
     resolution: {integrity: sha512-5nnx0yGyVUcY6t9RnWcARWtwT9F1D8O9rt08htPvnd49W1IgZtmLkhu9WfMzQj1cFxjHIO6connUNVW5k7AVyQ==}
@@ -3733,7 +3734,7 @@ snapshots:
       enabled: 2.0.0
       kuler: 2.0.0
 
-  '@decap/cli@0.1.2':
+  '@decap/cli@0.1.3':
     dependencies:
       '@hapi/joi': 17.1.1
       '@modelcontextprotocol/sdk': 1.32.1(zod@3.25.76)
@@ -4685,7 +4686,7 @@ snapshots:
       http-errors: 2.0.1
       iconv-lite: 0.7.3
       on-finished: 2.4.1
-      qs: 6.15.3
+      qs: 6.16.0
       raw-body: 3.0.2
       type-is: 2.1.0
     transitivePeerDependencies:
@@ -5008,9 +5009,9 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  decap-server@3.11.5:
+  decap-server@3.11.6:
     dependencies:
-      '@decap/cli': 0.1.2
+      '@decap/cli': 0.1.3
     transitivePeerDependencies:
       - '@cfworker/json-schema'
       - supports-color
@@ -5242,7 +5243,7 @@ snapshots:
       on-finished: 2.4.1
       parseurl: 1.3.3
       path-to-regexp: 0.1.13
-      proxy-addr: 2.0.7
+      proxy-addr: 2.0.8
       qs: 6.15.3
       range-parser: 1.2.1
       safe-buffer: 5.2.1
@@ -6397,11 +6398,6 @@ snapshots:
       xtend: 4.0.2
 
   property-information@7.2.0: {}
-
-  proxy-addr@2.0.7:
-    dependencies:
-      forwarded: 0.2.0
-      ipaddr.js: 1.9.1
 
   proxy-addr@2.0.8:
     dependencies:
