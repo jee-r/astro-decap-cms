@@ -29,7 +29,7 @@ importers:
         version: 9.3.1
       decap-cms-core:
         specifier: ^3.10.0
-        version: 3.20.2(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.4.3(@emotion/react@11.14.0(@types/react@19.2.17)))(decap-cms-lib-auth@3.3.4(immutable@4.3.9)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.9.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1))(decap-cms-lib-widgets@3.4.3(immutable@4.3.9)(lodash@4.18.1))(decap-cms-ui-default@3.9.4(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9))(uuid@8.3.2)
+        version: 3.21.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.4.3(@emotion/react@11.14.0(@types/react@19.2.17)))(decap-cms-lib-auth@3.4.0(immutable@4.3.9)(lodash@4.18.1))(decap-cms-lib-util@3.9.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1))(decap-cms-lib-widgets@3.4.3(immutable@4.3.9)(lodash@4.18.1))(decap-cms-ui-default@3.10.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9))
       typescript:
         specifier: ^5.7.2
         version: 5.9.3
@@ -1432,6 +1432,9 @@ packages:
   dayjs@1.11.21:
     resolution: {integrity: sha512-98IT+HOahAisibz/yjKbzuOBwYcjJ7BCLPzARyHiyEBmRz4fatF+KPJszEHXsGYjUG234aH/cOjW1wwTbKUZlA==}
 
+  dayjs@1.11.23:
+    resolution: {integrity: sha512-QDTCU0M0MxR3hQfnlDJfwekQiaanm1ubOD231u73WBckQ/fsamwRLiE2GBz6D3a/xF1NgfiDLJjXBa1hYOYTtQ==}
+
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
     peerDependencies:
@@ -1449,23 +1452,22 @@ packages:
       supports-color:
         optional: true
 
-  decap-cms-core@3.20.2:
-    resolution: {integrity: sha512-M7ncnOugNdYZ+YFXlJwIAxqBx59x5djpPf0YsCNLzsnP94QIa+e62d9UI34ovEGkrhpQQJV+rWSExqLM54rw8A==}
+  decap-cms-core@3.21.0:
+    resolution: {integrity: sha512-ZIxB6R4iXW8j7KnlIrjlTYMc03BGLO55jTOhXnsTaU8/hROPP7fKosHpLKnpPqN3nRVrQmnYa2Im5MGQ/Da6bw==}
     peerDependencies:
       '@emotion/react': ^11.11.1
       '@emotion/styled': ^11.11.0
       decap-cms-editor-component-image: 3.4.3
-      decap-cms-lib-auth: 3.3.4
+      decap-cms-lib-auth: 3.4.0
       decap-cms-lib-util: 3.9.2
       decap-cms-lib-widgets: 3.4.3
-      decap-cms-ui-default: 3.9.4
+      decap-cms-ui-default: 3.10.0
       immutable: ^4.3.9
       lodash: ^4.17.11
       prop-types: ^15.7.2
       react: ^19.1.0
       react-dom: ^19.1.0
       react-immutable-proptypes: ^2.1.0
-      uuid: ^8.3.2
 
   decap-cms-editor-component-image@3.4.3:
     resolution: {integrity: sha512-cja7GiLc/AJ+Hu+4DDLvOiK4ZZQupdMpQex4Y8SRQY9zKExvCOA/qgWGEII1vIveLTB8KbEB9fG7Pc1VhZqICw==}
@@ -1473,12 +1475,11 @@ packages:
       '@emotion/react': ^11.11.1
       react: ^19.1.0
 
-  decap-cms-lib-auth@3.3.4:
-    resolution: {integrity: sha512-twRiTjo48ZgodrG2/T0r447iK8EjdJwq29jefzpRaWk7y7EuwfyM6gahUE6hC2r4yeCZ+J7tSvyh1K4sc2S/0Q==}
+  decap-cms-lib-auth@3.4.0:
+    resolution: {integrity: sha512-qFib0EX+MGAPgln4As7U5wItoyER3CesJKjEPPCASPwymDUAXOo+/EStq8o8cNJwGM+jOVgwSUNoqiWlz42gqw==}
     peerDependencies:
       immutable: ^4.3.9
       lodash: ^4.17.11
-      uuid: ^8.3.2
 
   decap-cms-lib-util@3.9.2:
     resolution: {integrity: sha512-zq5heyUv6Sm2ZnfMgpMiRkmaqMBeCZ1V9/mhLddwfdx1lVhPbn6mYnIjXQwDuHpILYhku/Vtifu6oQfiHcCWGg==}
@@ -1493,8 +1494,8 @@ packages:
       immutable: ^4.3.9
       lodash: ^4.17.11
 
-  decap-cms-ui-default@3.9.4:
-    resolution: {integrity: sha512-Qso0qTWLxRSA+18JH9/deZY28JZiKLmhlnOyTEl2RsGuTwM4OtCFqCyyKreU7UeE9zc08mCVTwvQL3fG3xPUcQ==}
+  decap-cms-ui-default@3.10.0:
+    resolution: {integrity: sha512-+w5m924qj417KH2+ZUf5VxvqzjO2LC6zIce4YeVqd9i3dXRKPbQrhhp2/ATT1gG4FbhSb2LoO5nwfM81o/flZw==}
     peerDependencies:
       '@emotion/react': ^11.11.1
       '@emotion/styled': ^11.11.0
@@ -2018,8 +2019,8 @@ packages:
   jose@6.2.12:
     resolution: {integrity: sha512-9NiFmJEex0sy2Dk58j2UGBSHgUs2ypF9eZSu4L6vjOX3Dp96Sw1F3uL+H+D1sx02jZZdzUT0HgvCy59CuvXcWw==}
 
-  js-base64@3.9.3:
-    resolution: {integrity: sha512-uwYQp+VJ38FVvtim6qNbit6e9uT6dwWQ4Y1+H9TxhW5hcHjpHwoxlR0nMpqUmIFOmu4VqMxwdJA88gIVuZJQ/g==}
+  js-base64@3.9.6:
+    resolution: {integrity: sha512-LjkzbLtU6Lx6fjXMYGEACEB7rdtqZtxkBe9aS1ZpDNUyWgUivw3yBEIhQ37OVygJYRt+C+9e9fVT8PpFzH2Hww==}
 
   js-sha256@0.9.0:
     resolution: {integrity: sha512-sga3MHh9sgQN2+pJ9VYZ+1LPwXOxuBJBA5nrR5/ofPfuiJBE2hnjsaN8se8JznOmGLN2p49Pe5U/ttafcs/apA==}
@@ -2869,8 +2870,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sanitize-filename@1.6.4:
-    resolution: {integrity: sha512-9ZyI08PsvdQl2r/bBIGubpVdR3RR9sY6RDiWFPreA21C/EFlQhmgo20UZlNjZMMZNubusLhAQozkA0Od5J21Eg==}
+  sanitize-filename@1.6.5:
+    resolution: {integrity: sha512-+dVApt46/oAFWRP0KBSnYNLRw1peY7o/b12tmpllPNFpjfwkPuZut1+DiKaD9zYx5r2SHwc+XMLSBaDiyUJw3g==}
 
   sax@1.6.0:
     resolution: {integrity: sha512-6R3J5M4AcbtLUdZmRv2SygeVaM7IhrLXu9BmnOGmmACak8fiUtOsYNWUS4uK7upbmHIBbLBeFeI//477BKLBzA==}
@@ -3267,11 +3268,6 @@ packages:
   utils-merge@1.0.1:
     resolution: {integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==}
     engines: {node: '>= 0.4.0'}
-
-  uuid@8.3.2:
-    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
-    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
-    hasBin: true
 
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
@@ -4892,6 +4888,8 @@ snapshots:
 
   dayjs@1.11.21: {}
 
+  dayjs@1.11.23: {}
+
   debug@2.6.9:
     dependencies:
       ms: 2.0.0
@@ -4900,7 +4898,7 @@ snapshots:
     dependencies:
       ms: 2.1.3
 
-  decap-cms-core@3.20.2(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.4.3(@emotion/react@11.14.0(@types/react@19.2.17)))(decap-cms-lib-auth@3.3.4(immutable@4.3.9)(lodash@4.18.1)(uuid@8.3.2))(decap-cms-lib-util@3.9.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1))(decap-cms-lib-widgets@3.4.3(immutable@4.3.9)(lodash@4.18.1))(decap-cms-ui-default@3.9.4(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9))(uuid@8.3.2):
+  decap-cms-core@3.21.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(@types/hoist-non-react-statics@3.3.7(@types/react@19.2.17))(@types/node@25.0.9)(@types/react@19.2.17)(decap-cms-editor-component-image@3.4.3(@emotion/react@11.14.0(@types/react@19.2.17)))(decap-cms-lib-auth@3.4.0(immutable@4.3.9)(lodash@4.18.1))(decap-cms-lib-util@3.9.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1))(decap-cms-lib-widgets@3.4.3(immutable@4.3.9)(lodash@4.18.1))(decap-cms-ui-default@3.10.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.17)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17)
@@ -4914,12 +4912,12 @@ snapshots:
       buffer: 6.0.3
       common-tags: 1.8.2
       copy-text-to-clipboard: 3.2.2
-      dayjs: 1.11.21
+      dayjs: 1.11.23
       decap-cms-editor-component-image: 3.4.3(@emotion/react@11.14.0(@types/react@19.2.17))
-      decap-cms-lib-auth: 3.3.4(immutable@4.3.9)(lodash@4.18.1)(uuid@8.3.2)
+      decap-cms-lib-auth: 3.4.0(immutable@4.3.9)(lodash@4.18.1)
       decap-cms-lib-util: 3.9.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1)
       decap-cms-lib-widgets: 3.4.3(immutable@4.3.9)(lodash@4.18.1)
-      decap-cms-ui-default: 3.9.4(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9))
+      decap-cms-ui-default: 3.10.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9))
       deepmerge: 4.3.1
       diacritics: 1.3.0
       fuzzy: 0.1.3
@@ -4928,7 +4926,7 @@ snapshots:
       history: 4.10.1
       immer: 9.0.21
       immutable: 4.3.9
-      js-base64: 3.9.3
+      js-base64: 3.9.6
       jwt-decode: 3.1.2
       lodash: 4.18.1
       node-polyglot: 2.6.0
@@ -4955,12 +4953,11 @@ snapshots:
       redux-devtools-extension: 2.13.9(redux@4.2.1)
       redux-thunk: 2.4.2(redux@4.2.1)
       remark-gfm: 1.0.0
-      sanitize-filename: 1.6.4
+      sanitize-filename: 1.6.5
       semaphore: 1.1.0
       tomlify-j0.4: 3.0.0
       url: 0.11.4
       url-join: 4.0.1
-      uuid: 8.3.2
       what-input: 5.2.12
       yaml: 1.10.3
     transitivePeerDependencies:
@@ -4974,11 +4971,10 @@ snapshots:
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.17)
 
-  decap-cms-lib-auth@3.3.4(immutable@4.3.9)(lodash@4.18.1)(uuid@8.3.2):
+  decap-cms-lib-auth@3.4.0(immutable@4.3.9)(lodash@4.18.1):
     dependencies:
       immutable: 4.3.9
       lodash: 4.18.1
-      uuid: 8.3.2
 
   decap-cms-lib-util@3.9.2(common-tags@1.8.2)(immutable@4.3.9)(lodash@4.18.1):
     dependencies:
@@ -4996,7 +4992,7 @@ snapshots:
       lodash: 4.18.1
       path-browserify: 1.0.1
 
-  decap-cms-ui-default@3.9.4(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)):
+  decap-cms-ui-default@3.10.0(@emotion/react@11.14.0(@types/react@19.2.17))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17))(immutable@4.3.9)(lodash@4.18.1)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@4.3.9)):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.17)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.17))(@types/react@19.2.17)
@@ -5648,7 +5644,7 @@ snapshots:
 
   jose@6.2.12: {}
 
-  js-base64@3.9.3: {}
+  js-base64@3.9.6: {}
 
   js-sha256@0.9.0: {}
 
@@ -6789,7 +6785,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sanitize-filename@1.6.4:
+  sanitize-filename@1.6.5:
     dependencies:
       truncate-utf8-bytes: 1.0.2
 
@@ -7220,8 +7216,6 @@ snapshots:
   util-deprecate@1.0.2: {}
 
   utils-merge@1.0.1: {}
-
-  uuid@8.3.2: {}
 
   validate-npm-package-license@3.0.4:
     dependencies:
